@@ -1,7 +1,10 @@
 Coursera: Economics of Money and Banking
 ===
 
-[Course Link](https://www.coursera.org/learn/money-banking/home/welcome)
+[Coursera Course Link](https://www.coursera.org/learn/money-banking/home/welcome)
+
+Reading: The Economics of Money, Banking, and Financial Markets -Frederic S. Mishkin
+
 
 |Data       | Progress   |
 |-----------|:----------:|
