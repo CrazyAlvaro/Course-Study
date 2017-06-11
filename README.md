@@ -11,5 +11,8 @@ Study Progress
 
 
 #### TODO
-[FinancialTheory](https://ocw.mit.edu/courses/sloan-school-of-management/15-401-finance-theory-i-fall-2008/index.htm)
-[BusinessPlan](https://ocw.mit.edu/courses/sloan-school-of-management/15-s21-nuts-and-bolts-of-business-plans-january-iap-2014/index.htm)
+After Macroeconomics: [FinancialTheory](https://ocw.mit.edu/courses/sloan-school-of-management/15-401-finance-theory-i-fall-2008/index.htm)
+
+After AI and FinancialTheory [FinancialEngineering](https://www.coursera.org/learn/financial-engineering-1/home/welcome)
+
+After FinancialTheory [BusinessPlan](https://ocw.mit.edu/courses/sloan-school-of-management/15-s21-nuts-and-bolts-of-business-plans-january-iap-2014/index.htm)
