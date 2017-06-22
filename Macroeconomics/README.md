@@ -5,6 +5,6 @@
 
 Reading: Blanchard, Olivier, and David R. Johnson. Macroeconomics. 6th
 
-|Data       | Progress   |
-|-----------|:----------:|
-|  | |
+|Data       | Lecture Notes | Textbook Reading | Problem Set |    Quiz    |
+|-----------|:-------------:|:----------------:|:-----------:|:----------:|
+|06/12/17|L1~7|||
