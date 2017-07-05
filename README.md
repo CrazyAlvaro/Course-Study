@@ -6,7 +6,7 @@ Study Progress
 |[SICP](https://github.com/CrazyAlvaro/6.001-SICP)|11/20/15|     |          |
 |[ArtificialIntelligence](https://github.com/CrazyAlvaro/6.034-Artificial-Intelligence)|07/31/16|     |          |
 |[NeuralNetworks](https://github.com/CrazyAlvaro/Course-Study/tree/master/NeuralNetworks)|04/30/17|     |          |
-|[Money&Banking](https://github.com/CrazyAlvaro/Course-Study/tree/master/MoneyBanking)|05/31/17|     |          |
+|[Money&Banking](https://github.com/CrazyAlvaro/Course-Study/tree/master/MoneyBanking)|05/31/17|07/05/17|          |
 |[Macroeconomics](https://github.com/CrazyAlvaro/Course-Study/tree/master/Macroeconomics)|06/12/17|||
 |[FinancialEngineering](https://github.com/CrazyAlvaro/Course-Study/tree/master/FinancialEngineering)|06/22/17|||
 
