@@ -13,5 +13,6 @@ Reading: Investment Science, David G. Luenberger; Investments, Bodie, Kane, Marc
 |06/27/17   |CH 10  |||||
 |06/27/17   |||CH 1,2,3,4 |||
 |07/07/17   |||| Week3 ||
+|07/10/17   |||| Week4 ||
 |07/12/17   |CH 6 |||||
 |07/14/17   ||||| Week1 |
