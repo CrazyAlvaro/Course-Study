@@ -6,7 +6,7 @@ Coursera: Economics of Money and Banking
 Reading: The Economics of Money, Banking, and Financial Markets -Frederic S. Mishkin
 
 
-|Data       | Textbook Reading | Progress   |
+|Date       | Textbook Reading | Progress   |
 |-----------|:----------------:|:----------:|
 |05/31/17   |  | Week1 |
 |06/02/17   |  | Week2 |
