@@ -12,6 +12,7 @@ Study Progress
 
 
 #### TODO
+[mathematicsWithApplicationInFinance](https://ocw.mit.edu/courses/mathematics/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/index.htm)
 After Macroeconomics: [FinancialTheory](https://ocw.mit.edu/courses/sloan-school-of-management/15-401-finance-theory-i-fall-2008/index.htm)
 
 After FinancialTheory [BusinessPlan](https://ocw.mit.edu/courses/sloan-school-of-management/15-s21-nuts-and-bolts-of-business-plans-january-iap-2014/index.htm)
