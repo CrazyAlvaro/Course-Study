@@ -16,3 +16,4 @@ Reading: Investment Science, David G. Luenberger; Investments, Bodie, Kane, Marc
 |07/10/17   |||| Week4 ||
 |07/12/17   |CH 6 |||||
 |07/14/17   ||||| Week1 |
+|07/21/17   |||| Week5 ||

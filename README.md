@@ -4,11 +4,13 @@ Study Progress
 |Course/Book       |  Start Date  |  End Date  |     Comment     |
 |------------------|:------------:|:----------:|:---------------:|
 |[SICP](https://github.com/CrazyAlvaro/6.001-SICP)|11/20/15|     |          |
-|[ArtificialIntelligence](https://github.com/CrazyAlvaro/6.034-Artificial-Intelligence)|07/31/16|     |          |
+|[ArtificialIntelligence](https://github.com/CrazyAlvaro/6.034-Artificial-Intelligence)|07/31/16|08/01/17|          |
 |[NeuralNetworks](https://github.com/CrazyAlvaro/Course-Study/tree/master/NeuralNetworks)|04/30/17|     |          |
 |[Money&Banking](https://github.com/CrazyAlvaro/Course-Study/tree/master/MoneyBanking)|05/31/17|07/05/17|          |
 |[Macroeconomics](https://github.com/CrazyAlvaro/Course-Study/tree/master/Macroeconomics)|06/12/17|||
 |[FinancialEngineering](https://github.com/CrazyAlvaro/Course-Study/tree/master/FinancialEngineering)|06/22/17|||
+|[QuantopianTutorial](https://github.com/CrazyAlvaro/Course-Study/tree/master/Quantopian)|07/15/17|||
+|[Zhuangzi](https://github.com/CrazyAlvaro/Course-Study/tree/master/Zhuangzi)|07/17/17|||
 
 
 #### TODO
