@@ -30,6 +30,8 @@ Oct:
 |[MachineLearning](https://github.com/CrazyAlvaro/Course-Study/tree/master/MachineLearning)|08/05/17|||
 |[DeepLearning](https://github.com/CrazyAlvaro/Course-Study/tree/master/DeepLearning)|08/17/17|||
 |[ProbablilisticSystem](https://github.com/CrazyAlvaro/Course-Study/tree/master/ProbablilisticSystem)||||
+|[MachineLearningforTrading(https://github.com/CrazyAlvaro/Course-Study/tree/master/MachineLearningforTrading)]|09/21/17|||
+|[DeepLearningwithTensorFlow](https://github.com/CrazyAlvaro/Course-Study/tree/master/DeepLearningwithTensorFlow)|09/08/17|||
 
 
 #### Interested Courses
