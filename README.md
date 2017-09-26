@@ -21,10 +21,10 @@ Study Progress
 |[QuantopianTutorial](https://github.com/CrazyAlvaro/Course-Study/tree/master/Quantopian)|07/15/17|||
 |[Zhuangzi](https://github.com/CrazyAlvaro/Course-Study/tree/master/Zhuangzi)|07/17/17|08/15/17||
 |[IntroductionToComputationalThinkingAndDataScience](https://github.com/CrazyAlvaro/Course-Study/tree/master/IntroductionComputation)|08/05/17|||
-|[MachineLearning](https://github.com/CrazyAlvaro/Course-Study/tree/master/MachineLearning)|08/05/17|||
+|[MachineLearning](https://github.com/CrazyAlvaro/Course-Study/tree/master/MachineLearning)||||
 |[DeepLearning](https://github.com/CrazyAlvaro/Course-Study/tree/master/DeepLearning)|08/17/17|||
 |[ProbablilisticSystem](https://github.com/CrazyAlvaro/Course-Study/tree/master/ProbablilisticSystem)||||
-|[MachineLearningforTrading](https://github.com/CrazyAlvaro/Course-Study/tree/master/MachineLearningforTrading)|09/21/17|||
+|[MachineLearningforTrading](https://github.com/CrazyAlvaro/Course-Study/tree/master/MachineLearningforTrading)|09/21/17|09/26/17|Last part Reinforcement Learning is not well understood|
 |[DeepLearningwithTensorFlow](https://github.com/CrazyAlvaro/Course-Study/tree/master/DeepLearningwithTensorFlow)|09/08/17|||
 
 
