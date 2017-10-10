@@ -20,24 +20,24 @@ Study Progress
 |[FinancialEngineering](https://github.com/CrazyAlvaro/Course-Study/tree/master/FinancialEngineering)|06/22/17|||
 |[QuantopianTutorial](https://github.com/CrazyAlvaro/Course-Study/tree/master/Quantopian)|07/15/17|||
 |[Zhuangzi](https://github.com/CrazyAlvaro/Course-Study/tree/master/Zhuangzi)|07/17/17|08/15/17||
-|[IntroductionToComputationalThinkingAndDataScience](https://github.com/CrazyAlvaro/Course-Study/tree/master/IntroductionComputation)|08/05/17|||
-|[MachineLearning](https://github.com/CrazyAlvaro/Course-Study/tree/master/MachineLearning)||||
+|[IntroductionToComputationalThinkingAndDataScience](https://github.com/CrazyAlvaro/Course-Study/tree/master/IntroductionComputation)||||
+|[MachineLearning](https://github.com/CrazyAlvaro/Course-Study/tree/master/MachineLearning)|08/05/17|||
 |[DeepLearning](https://github.com/CrazyAlvaro/Course-Study/tree/master/DeepLearning)|08/17/17|||
 |[ProbablilisticSystem](https://github.com/CrazyAlvaro/Course-Study/tree/master/ProbablilisticSystem)||||
-|[MachineLearningforTrading](https://github.com/CrazyAlvaro/Course-Study/tree/master/MachineLearningforTrading)|09/21/17|09/26/17|Last part Reinforcement Learning is not well understood|
+|[MachineLearningforTrading](https://github.com/CrazyAlvaro/Course-Study/tree/master/MachineLearningforTrading)|09/21/17|09/26/17|Last Reinforcement Learning part is not well understood|
 |[DeepLearningwithTensorFlow](https://github.com/CrazyAlvaro/Course-Study/tree/master/DeepLearningwithTensorFlow)|09/08/17|||
 
 
 #### Interested Courses
-[TopicsInMathematicsWithApplicationsInFinance](https://ocw.mit.edu/courses/mathematics/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/index.htm)
+[ConvolutionalNeuralNetworksforVisualRecognition](http://cs231n.stanford.edu/)
 
-[DeepLearning](https://classroom.udacity.com/courses/ud730)
+[ProbabilisticGraphicalModelsSpecialization](https://www.coursera.org/courses?languages=en&query=probability+graphical+model)
+
+[TopicsInMathematicsWithApplicationsInFinance](https://ocw.mit.edu/courses/mathematics/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/index.htm)
 
 [MultivariableCalculus](http://ocw2.mit.edu/courses/mathematics/18-02-multivariable-calculus-fall-2007/index.htm)
 
 [DifferentialEquations](http://ocw2.mit.edu/courses/mathematics/18-03-differential-equations-spring-2010/index.htm)
-
-[mathematicsWithApplicationInFinance](https://ocw.mit.edu/courses/mathematics/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/index.htm)
 
 [FinancialTheory](https://ocw.mit.edu/courses/sloan-school-of-management/15-401-finance-theory-i-fall-2008/index.htm)
 
