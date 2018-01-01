@@ -4,12 +4,17 @@ Study Progress
 ## Calendar:
 ### 2017
 ### Sep:
-- [ ] Udacity Machine Learning for Trading
+- [x] Udacity Machine Learning for Trading
 - [ ] Deep Learning with Tensorllow
 - [ ] Udacity Machine Learning
-### Oct
+### Oct:
 - [ ] SICP Chapter 4
 - [ ] Deep Learning Course 4
+
+### 2018
+### Jan:
+- [ ] Introduction to Financial Accounting
+- [ ] More Introduction to Financial Accounting
 
 
 |Course/Book       |  Start Date  |  End Date  |     Comment     |
@@ -26,6 +31,7 @@ Study Progress
 |[ProbablilisticSystem](https://github.com/CrazyAlvaro/Course-Study/tree/master/ProbablilisticSystem)||||
 |[MachineLearningforTrading](https://github.com/CrazyAlvaro/Course-Study/tree/master/MachineLearningforTrading)|09/21/17|09/26/17|Last Reinforcement Learning part is not well understood|
 |[DeepLearningwithTensorFlow](https://github.com/CrazyAlvaro/Course-Study/tree/master/DeepLearningwithTensorFlow)|09/08/17|||
+|[FinancialAccounting](https://github.com/CrazyAlvaro/Course-Study/tree/master/IntroductionFinancialAccounting)|01/01/18|||
 
 
 #### Interested Courses
@@ -43,4 +49,4 @@ Study Progress
 
 [BusinessPlan](https://ocw.mit.edu/courses/sloan-school-of-management/15-s21-nuts-and-bolts-of-business-plans-january-iap-2014/index.htm)
 
-[StatisticalLearningTheoryandApplications](https://www.youtube.com/playlist?list=PLyGKBDfnk-iDj3FBd0Avr_dLbrU8VG73O)
+[StatisticalLearningTheoryandApplications]()
