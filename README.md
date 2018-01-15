@@ -13,8 +13,15 @@ Study Progress
 
 ### 2018
 ### Jan:
-- [ ] Introduction to Financial Accounting
+- [X] Introduction to Financial Accounting
 - [ ] More Introduction to Financial Accounting
+- [ ] Accounting Analytics
+
+### Feb:
+- [ ] ProbablilisticSystem
+
+### Mar:
+- [ ] LinearAlgebra
 
 
 |Course/Book       |  Start Date  |  End Date  |     Comment     |
@@ -35,6 +42,8 @@ Study Progress
 
 
 #### Interested Courses
+[LinearAlgebra](https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/)
+
 [ConvolutionalNeuralNetworksforVisualRecognition](http://cs231n.stanford.edu/)
 
 [ProbabilisticGraphicalModelsSpecialization](https://www.coursera.org/courses?languages=en&query=probability+graphical+model)
@@ -49,4 +58,4 @@ Study Progress
 
 [BusinessPlan](https://ocw.mit.edu/courses/sloan-school-of-management/15-s21-nuts-and-bolts-of-business-plans-january-iap-2014/index.htm)
 
-[StatisticalLearningTheoryandApplications]()
+[StatisticalLearningTheoryandApplications](http://www.mit.edu/~9.520/fall17/)
