@@ -9,17 +9,13 @@ Study Progress
 - [ ] StatisticsForApplication
 - [ ] SICP
 
-## Calendar:
-## 2017
-### Sep:
-- [x] Udacity Machine Learning for Trading
-- [ ] Deep Learning with Tensorllow
-- [ ] Udacity Machine Learning
-### Oct:
-- [ ] SICP Chapter 4
-- [ ] Deep Learning Course 4
-
 ## 2018
+### Q2: April, May, June
+- [X] More Introduction to Financial Accounting
+- [ ] MIT_OCW: TopicsInMathematicsWithApplicationsInFinance
+- [ ] Quantopian Lecture: Risk Model 0/3
+- [ ] Coursera: Accounting Analytics
+
 ### Q1: Jan, Feb, Mar
 - [X] Introduction to Financial Accounting
 - [ ] Accounting Analytics
@@ -27,11 +23,15 @@ Study Progress
 - [ ] LinearAlgebra
 - [ ] StatisticsForApplication
 
-### Q2: April, May, June
-- [X] More Introduction to Financial Accounting
-- [ ] MIT_OCW: TopicsInMathematicsWithApplicationsInFinance
-- [ ] Quantopian Lecture: Risk Model 0/3
-- [ ] Coursera: Accounting Analytics
+## 2017
+### Oct:
+- [ ] SICP Chapter 4
+- [ ] Deep Learning Course 4
+
+### Sep:
+- [x] Udacity Machine Learning for Trading
+- [ ] Deep Learning with Tensorllow
+- [ ] Udacity Machine Learning
 
 
 
