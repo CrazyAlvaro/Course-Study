@@ -10,6 +10,10 @@ Study Progress
 - [ ] SICP
 
 ## 2018
+### Q3: July, Aug, Sep
+- [ ] MathematicsForEconomists
+- [ ] ProbablilisticSystem
+
 ### Q2: April, May, June
 - [X] More Introduction to Financial Accounting
 - [ ] MIT_OCW: TopicsInMathematicsWithApplicationsInFinance
@@ -45,10 +49,11 @@ Study Progress
 |[Zhuangzi](https://github.com/CrazyAlvaro/Course-Study/tree/master/Zhuangzi)|07/17/17|08/15/17||
 |[MachineLearning](https://github.com/CrazyAlvaro/Course-Study/tree/master/MachineLearning)|08/05/17|||
 |[DeepLearning](https://github.com/CrazyAlvaro/Course-Study/tree/master/DeepLearning)|08/17/17|||
-|[ProbablilisticSystem](https://github.com/CrazyAlvaro/Course-Study/tree/master/ProbablilisticSystem)||||
+|[ProbablilisticSystem](https://github.com/CrazyAlvaro/Course-Study/tree/master/ProbablilisticSystem)|07/03/18|||
 |[MachineLearningforTrading](https://github.com/CrazyAlvaro/Course-Study/tree/master/MachineLearningforTrading)|09/21/17|09/26/17|Last Reinforcement Learning part is not well understood|
 |[DeepLearningwithTensorFlow](https://github.com/CrazyAlvaro/Course-Study/tree/master/DeepLearningwithTensorFlow)|09/08/17|||
 |[FinancialAccounting](https://github.com/CrazyAlvaro/Course-Study/tree/master/FinancialAccountingSeries)|01/01/18|||
+|[MathematicsForEconomists](https://github.com/CrazyAlvaro/Course-Study/tree/master/MathematicsForEconomists)|08/15/18|||
 
 
 #### Interested Courses
