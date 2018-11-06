@@ -11,28 +11,28 @@ Study Progress
 
 ### On Going Courses
 |State|Course/Book       |  Start Date  |  End Date  |     Comment     |
-|:-----:|------------------|:------------:|:----------:|:---------------:|
-| - [ ] |[MathematicsForEconomists](https://github.com/CrazyAlvaro/Course-Study/tree/master/MathematicsForEconomists)|08/15/18|||
+|:----:|------------------|:------------:|:----------:|:---------------:|
+| -[ ] |[MathematicsForEconomists](https://github.com/CrazyAlvaro/Course-Study/tree/master/MathematicsForEconomists)|08/15/18|||
 
 ### Complete Courses
 |State|Course/Book       |  Start Date  |  End Date  |     Comment     |
-|:-----:|------------------|:------------:|:----------:|:---------------:|
-| - [X] |[FinancialAccounting](https://github.com/CrazyAlvaro/Course-Study/tree/master/FinancialAccountingSeries)|01/01/18|04/08/18||
-| - [X] |[MachineLearningforTrading](https://github.com/CrazyAlvaro/Course-Study/tree/master/MachineLearningforTrading)|09/21/17|09/26/17|Last Reinforcement Learning part is not well understood|
-| - [X] |[ArtificialIntelligence](https://github.com/CrazyAlvaro/6.034-Artificial-Intelligence)|07/31/16|08/01/17|          |
-| - [X] |[Money&Banking](https://github.com/CrazyAlvaro/Course-Study/tree/master/MoneyBanking)|05/31/17|07/05/17|          |
-| - [X] |[Zhuangzi](https://github.com/CrazyAlvaro/Course-Study/tree/master/Zhuangzi)|07/17/17|08/15/17||
+|:----:|------------------|:------------:|:----------:|:---------------:|
+| -[X] |[FinancialAccounting](https://github.com/CrazyAlvaro/Course-Study/tree/master/FinancialAccountingSeries)|01/01/18|04/08/18||
+| -[X] |[MachineLearningforTrading](https://github.com/CrazyAlvaro/Course-Study/tree/master/MachineLearningforTrading)|09/21/17|09/26/17|Last Reinforcement Learning part is not well understood|
+| -[X] |[ArtificialIntelligence](https://github.com/CrazyAlvaro/6.034-Artificial-Intelligence)|07/31/16|08/01/17|          |
+| -[X] |[Money&Banking](https://github.com/CrazyAlvaro/Course-Study/tree/master/MoneyBanking)|05/31/17|07/05/17|          |
+| -[X] |[Zhuangzi](https://github.com/CrazyAlvaro/Course-Study/tree/master/Zhuangzi)|07/17/17|08/15/17||
 
 ### Legacy Courses
 |State|Course/Book       |  Start Date  |  End Date  |     Comment     |
-|:-----:|------------------|:------------:|:----------:|:---------------:|
-| - [ ] |[SICP](https://github.com/CrazyAlvaro/6.001-SICP)|11/20/15|     |          |
-| - [ ] |[FinancialEngineering](https://github.com/CrazyAlvaro/Course-Study/tree/master/FinancialEngineering)|06/22/17|||
-| - [ ] |[QuantopianTutorial](https://github.com/CrazyAlvaro/Course-Study/tree/master/Quantopian)|07/15/17|||
-| - [ ] |[MachineLearning](https://github.com/CrazyAlvaro/Course-Study/tree/master/MachineLearning)|08/05/17|||
-| - [ ] |[DeepLearning](https://github.com/CrazyAlvaro/Course-Study/tree/master/DeepLearning)|08/17/17|||
-| - [ ] |[DeepLearningwithTensorFlow](https://github.com/CrazyAlvaro/Course-Study/tree/master/DeepLearningwithTensorFlow)|09/08/17|||
-| - [ ] |[ProbablilisticSystem](https://github.com/CrazyAlvaro/Course-Study/tree/master/ProbablilisticSystem)|07/03/18|||
+|:----:|------------------|:------------:|:----------:|:---------------:|
+| -[ ] |[SICP](https://github.com/CrazyAlvaro/6.001-SICP)|11/20/15|     |          |
+| -[ ] |[FinancialEngineering](https://github.com/CrazyAlvaro/Course-Study/tree/master/FinancialEngineering)|06/22/17|||
+| -[ ] |[QuantopianTutorial](https://github.com/CrazyAlvaro/Course-Study/tree/master/Quantopian)|07/15/17|||
+| -[ ] |[MachineLearning](https://github.com/CrazyAlvaro/Course-Study/tree/master/MachineLearning)|08/05/17|||
+| -[ ] |[DeepLearning](https://github.com/CrazyAlvaro/Course-Study/tree/master/DeepLearning)|08/17/17|||
+| -[ ] |[DeepLearningwithTensorFlow](https://github.com/CrazyAlvaro/Course-Study/tree/master/DeepLearningwithTensorFlow)|09/08/17|||
+| -[ ] |[ProbablilisticSystem](https://github.com/CrazyAlvaro/Course-Study/tree/master/ProbablilisticSystem)|07/03/18|||
 
 
 #### Quantitative Finance Related courses
