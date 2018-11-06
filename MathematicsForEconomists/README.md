@@ -8,3 +8,5 @@ Coursera: Mathematics For Economists
 |Date       | Progress   |
 |-----------|:----------:|
 |08/20/18   |   Week1    |
+|08/27/18   |   Week2    |
+|09/04/18   |   Week3    |

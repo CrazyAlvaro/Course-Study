@@ -12,4 +12,4 @@ Coursera courses:
 |01/11/18| C1W2: Accrual Accounting and the Income Statement||
 |01/13/18| C1W3: Operating, Investing, and Financial Cash Flows| 3.3.2 Cash Flow vs EBITDA is very important|
 |01/14/18| C1W4: Ratio Analysis and Final Exam||
-|04/08/18| C2||
+|04/08/18| C2|Finished|
