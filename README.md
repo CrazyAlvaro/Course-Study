@@ -37,7 +37,7 @@ Study Progress
 
 #### Quantitative Finance Related courses
 
-[Reinforcement Learning in Finance](https://www.coursera.org/learn/reinforcement-learning-in-finance#)
+[Machine Learning in Finance](https://www.coursera.org/specializations/machine-learning-reinforcement-finance#courses)
 
 [Improving your statistical Inferences](https://www.coursera.org/learn/statistical-inferences)
 
