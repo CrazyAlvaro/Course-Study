@@ -1,18 +1,12 @@
 Study Progress
 ===
-### Latest update: 11/06/18
+### Latest update: 08/22/19
 
 ### TO BE START
-[IntroductionToComputationalThinkingandDataScience](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-0002-introduction-to-computational-thinking-and-data-science-fall-2016/index.htm)
-
-[TopicsInMathematicsWithApplicationsInFinance](https://ocw.mit.edu/courses/mathematics/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/index.htm)
-
-[YaleFinancialTheory](https://oyc.yale.edu/economics/econ-251)
 
 ### On Going Courses
 |Course/Book       |  Start Date  |  End Date  |     Comment     |
 |:-----------------|:------------:|:----------:|:---------------:|
-|[MathematicsForEconomists](https://github.com/CrazyAlvaro/Course-Study/tree/master/MathematicsForEconomists)|08/15/18|||
 
 ### Complete Courses
 |Course/Book       |  Start Date  |  End Date  |     Comment     |
@@ -32,19 +26,6 @@ Study Progress
 |[MachineLearning](https://github.com/CrazyAlvaro/Course-Study/tree/master/MachineLearning)|08/05/17|||
 |[DeepLearning](https://github.com/CrazyAlvaro/Course-Study/tree/master/DeepLearning)|08/17/17|||
 |[DeepLearningwithTensorFlow](https://github.com/CrazyAlvaro/Course-Study/tree/master/DeepLearningwithTensorFlow)|09/08/17|||
-|[ProbablilisticSystem](https://github.com/CrazyAlvaro/Course-Study/tree/master/ProbablilisticSystem)|07/03/18|||
-
-
-#### Quantitative Finance Related courses
-
-[Machine Learning in Finance](https://www.coursera.org/specializations/machine-learning-reinforcement-finance#courses)
-
-[Improving your statistical Inferences](https://www.coursera.org/learn/statistical-inferences)
-
-[Practical Time Series Analysis](https://www.coursera.org/learn/practical-time-series-analysis)
-
-[Stochastic Processes](https://www.coursera.org/learn/stochasticprocesses#)
-
 
 #### Interested Courses
 [LinearAlgebra](https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/)
@@ -68,3 +49,17 @@ Study Progress
 [ComputationalScienceAndEngineeringII](https://ocw.mit.edu/courses/mathematics/18-086-mathematical-methods-for-engineers-ii-spring-2006/index.htm)
 
 [StatisticsForApplication](https://ocw.mit.edu/courses/mathematics/18-650-statistics-for-applications-fall-2016/index.htm)
+
+[TopicsInMathematicsWithApplicationsInFinance](https://ocw.mit.edu/courses/mathematics/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/index.htm)
+
+[YaleFinancialTheory](https://oyc.yale.edu/economics/econ-251)
+
+|[ProbablilisticSystem](https://github.com/CrazyAlvaro/Course-Study/tree/master/ProbablilisticSystem)|07/03/18|||
+
+[Machine Learning in Finance](https://www.coursera.org/specializations/machine-learning-reinforcement-finance#courses)
+
+[Improving your statistical Inferences](https://www.coursera.org/learn/statistical-inferences)
+
+[Practical Time Series Analysis](https://www.coursera.org/learn/practical-time-series-analysis)
+
+[Stochastic Processes](https://www.coursera.org/learn/stochasticprocesses#)
