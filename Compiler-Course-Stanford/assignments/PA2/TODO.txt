@@ -1,0 +1,2 @@
+01/25/14
+add regex for string, (, ), and other special symbols
