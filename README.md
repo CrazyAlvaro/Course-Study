@@ -7,20 +7,19 @@ Study Progress
 ### On Going Courses
 |Course/Book       |  Start Date  |  End Date  |     Comment     |
 |:-----------------|:------------:|:----------:|:---------------:|
+|[AppliedDataScience](https://github.com/CrazyAlvaro/Course-Study/tree/master/AppliedDataScience)|09/03/19|||
 
 ### Complete Courses
 |Course/Book       |  Start Date  |  End Date  |     Comment     |
 |:------------------|:------------:|:----------:|:---------------:|
 |[FinancialAccounting](https://github.com/CrazyAlvaro/Course-Study/tree/master/FinancialAccountingSeries)|01/01/18|04/08/18||
 |[MachineLearningforTrading](https://github.com/CrazyAlvaro/Course-Study/tree/master/MachineLearningforTrading)|09/21/17|09/26/17|Last Reinforcement Learning part is not well understood|
-|[ArtificialIntelligence](https://github.com/CrazyAlvaro/6.034-Artificial-Intelligence)|07/31/16|08/01/17|          |
-|[Money&Banking](https://github.com/CrazyAlvaro/Course-Study/tree/master/MoneyBanking)|05/31/17|07/05/17|          |
-|[Zhuangzi](https://github.com/CrazyAlvaro/Course-Study/tree/master/Zhuangzi)|07/17/17|08/15/17||
+|[ArtificialIntelligence](https://github.com/CrazyAlvaro/Course-Study/tree/master/6.034-ArtificialIntellifence)|07/31/16|08/01/17|          |
 
 ### Legacy Courses
 |Course/Book       |  Start Date  |  End Date  |     Comment     |
 |------------------|:------------:|:----------:|:---------------:|
-|[SICP](https://github.com/CrazyAlvaro/6.001-SICP)|11/20/15|     |          |
+|[SICP](https://github.com/CrazyAlvaro/Course-Study/tree/master/6.001-SICP)|11/20/15|     |          |
 |[FinancialEngineering](https://github.com/CrazyAlvaro/Course-Study/tree/master/FinancialEngineering)|06/22/17|||
 |[QuantopianTutorial](https://github.com/CrazyAlvaro/Course-Study/tree/master/Quantopian)|07/15/17|||
 |[MachineLearning](https://github.com/CrazyAlvaro/Course-Study/tree/master/MachineLearning)|08/05/17|||
@@ -55,10 +54,6 @@ Study Progress
 [YaleFinancialTheory](https://oyc.yale.edu/economics/econ-251)
 
 |[ProbablilisticSystem](https://github.com/CrazyAlvaro/Course-Study/tree/master/ProbablilisticSystem)|07/03/18|||
-
-[Machine Learning in Finance](https://www.coursera.org/specializations/machine-learning-reinforcement-finance#courses)
-
-[Improving your statistical Inferences](https://www.coursera.org/learn/statistical-inferences)
 
 [Practical Time Series Analysis](https://www.coursera.org/learn/practical-time-series-analysis)
 

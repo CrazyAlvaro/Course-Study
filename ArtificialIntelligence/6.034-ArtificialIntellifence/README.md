@@ -1,4 +1,4 @@
-6.034 Arrificial Intellifence
+6.034 Artificial Intellifence
 ===
 
 FINISHED: 2019.06.07
