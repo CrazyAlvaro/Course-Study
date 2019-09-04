@@ -1,8 +1,10 @@
 Study Progress
 ===
-### Latest update: 09/03/19
+### Latest update: 09/04/19
 
 ### TO BE START
+#### Mathematics
+[ProbabilisticSystemAnalysisAppliedProbability](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/index.htm)
 [ComputationalNeuroscience](https://www.coursera.org/learn/computational-neuroscience)
 [MachineLearningSpecialization](https://www.coursera.org/specializations/machine-learning)
 [AdvancedMachineLearning](https://www.coursera.org/specializations/aml)
@@ -31,7 +33,6 @@ Study Progress
 
 ### Interested Courses
 
-#### Mathematics
 [NumericalAnalysis](https://www.coursera.org/learn/intro-to-numerical-analysis)
 [ConvexOptimization](https://lagunita.stanford.edu/courses/Engineering/CVX101/Winter2014/about)
 [MultivariableCalculus](http://ocw2.mit.edu/courses/mathematics/18-02-multivariable-calculus-fall-2007/index.htm)
