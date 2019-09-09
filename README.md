@@ -15,14 +15,14 @@ Study Progress
 ### On Going Courses
 |Course/Book       |  Start Date  |  End Date  |     Comment     |
 |:-----------------|:------------:|:----------:|:---------------:|
-|[AppliedDataScience](https://github.com/CrazyAlvaro/Course-Study/tree/master/ArtificialIntelligence/AppliedDataScience)|09/03/19|||
+|[AppliedDataScience](https://github.com/CrazyAlvaro/Course-Study/tree/master/DataScience/AppliedDataScience)|09/03/19|||
 
 ### Complete Courses
 |Course/Book       |  Start Date  |  End Date  |     Comment     |
 |:------------------|:------------:|:----------:|:---------------:|
 |[FinancialAccounting](https://github.com/CrazyAlvaro/Course-Study/tree/master/EconomicsFinance/FinancialAccountingSeries)|01/01/18|04/08/18||
 |[MachineLearningforTrading](https://github.com/CrazyAlvaro/Course-Study/tree/master/EconomicsFinance/MachineLearningforTrading)|09/21/17|09/26/17|Last Reinforcement Learning part is not well understood|
-|[ArtificialIntelligence](https://github.com/CrazyAlvaro/Course-Study/tree/master/ArtificialIntelligence/6.034-ArtificialIntellifence)|07/31/16|08/01/17|          |
+|[ArtificialIntelligence](https://github.com/CrazyAlvaro/Course-Study/tree/master/DataScience/6.034-ArtificialIntellifence)|07/31/16|08/01/17|          |
 
 ### Legacy Courses
 |Course/Book       |  Start Date  |  End Date  |     Comment     |
@@ -30,11 +30,11 @@ Study Progress
 |[SICP](https://github.com/CrazyAlvaro/Course-Study/tree/master/ComputerScience/6.001-SICP)|11/20/15|     |          |
 |[FinancialEngineering](https://github.com/CrazyAlvaro/Course-Study/tree/master/EconomicsFinance/FinancialEngineering)|06/22/17|||
 |[QuantopianTutorial](https://github.com/CrazyAlvaro/Course-Study/tree/master/EconomicsFinance/Quantopian)|07/15/17|||
-|[MachineLearning](https://github.com/CrazyAlvaro/Course-Study/tree/master/ArtificialIntelligence/MachineLearning)|08/05/17|||
-|[DeepLearning](https://github.com/CrazyAlvaro/Course-Study/tree/master/ArtificialIntelligence/DeepLearning)|08/17/17|||
-|[DeepLearningwithTensorFlow](https://github.com/CrazyAlvaro/Course-Study/tree/master/ArtificialIntelligence/DeepLearningwithTensorFlow)|09/08/17|||
+|[MachineLearning](https://github.com/CrazyAlvaro/Course-Study/tree/master/DataScience/MachineLearning)|08/05/17|||
+|[DeepLearning](https://github.com/CrazyAlvaro/Course-Study/tree/master/DataScience/DeepLearning)|08/17/17|||
+|[DeepLearningwithTensorFlow](https://github.com/CrazyAlvaro/Course-Study/tree/master/DataScience/DeepLearningwithTensorFlow)|09/08/17|||
 
-### Interested Courses
+### Future Courses
 
 [NumericalAnalysis](https://www.coursera.org/learn/intro-to-numerical-analysis)
 [ConvexOptimization](https://lagunita.stanford.edu/courses/Engineering/CVX101/Winter2014/about)
