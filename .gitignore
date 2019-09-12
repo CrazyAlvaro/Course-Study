@@ -1,1 +1,3 @@
 *.mp4
+credential.py
+__pycache__/
