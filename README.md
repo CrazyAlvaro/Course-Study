@@ -14,6 +14,7 @@ Study Progress
 |Course/Book       |  Start Date  |  End Date  |     Comment     |
 |:-----------------|:------------:|:----------:|:---------------:|
 |[AppliedDataScience](https://github.com/CrazyAlvaro/Course-Study/tree/master/DataScience/AppliedDataScience)|09/03/19|||
+|[MathForMachineLearning]((https://github.com/CrazyAlvaro/Course-Study/tree/master/Mathematics/MathForMachineLearning))|09/12/19||]
 
 ### Complete Courses
 |Course/Book       |  Start Date  |  End Date  |     Comment     |
