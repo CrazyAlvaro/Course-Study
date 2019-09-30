@@ -5,7 +5,11 @@ Study SICP, read the text book, finish exercises
 
 [Project](http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-001-structure-and-interpretation-of-computer-programs-spring-2005/projects/)
 
+[Infomation](https://mitpress.mit.edu/sites/default/files/sicp/index.html)
+
 [Sample Assignment](https://mitpress.mit.edu/sicp/psets/)
+
+Last Update: 09/30/19
 
 Tracking my progress
 
@@ -44,6 +48,7 @@ Tracking my progress
 |04/18/17   |         |          | 3.3      |          |
 |04/18/17   |         |          | 3.4      |          |
 |05/02/17   |         |          | 3.5      |          |
+|09/29/19   |         | 3.5      |          |          |
+|09/30/19   | 6B      |          |          |          |
 
 ===
-4.3, 4.4 is not quite understand
