@@ -9,7 +9,7 @@ Study SICP, read the text book, finish exercises
 
 [Sample Assignment](https://mitpress.mit.edu/sicp/psets/)
 
-Last Update: 09/30/19
+Last Update: 10/15/19
 
 Tracking my progress
 
@@ -50,5 +50,7 @@ Tracking my progress
 |05/02/17   |         |          | 3.5      |          |
 |09/29/19   |         | 3.5      |          |          |
 |09/30/19   | 6B      |          |          |          |
+|10/15/19   | 7a      |          |          |          |
+|12/25/19   |         | 4.2      |          |          |
 
 ===

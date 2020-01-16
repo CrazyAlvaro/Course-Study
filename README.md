@@ -1,11 +1,9 @@
 Study Progress
 ===
-### Latest update: 09/11/19
+### Latest update: 01/16/20
 
-### Planned 
+### Planned
 #### Mathematics
-[ProbabilisticSystemAnalysisAppliedProbability](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/index.htm)
-
 [ComputationalNeuroscience](https://www.coursera.org/learn/computational-neuroscience)
 
 [AdvancedMachineLearning](https://www.coursera.org/specializations/aml)
@@ -13,12 +11,15 @@ Study Progress
 ### On Going Courses
 |Course/Book       |  Start Date  |  End Date  |     Comment     |
 |:-----------------|:------------:|:----------:|:---------------:|
-|[AppliedDataScience](https://github.com/CrazyAlvaro/Course-Study/tree/master/DataScience/AppliedDataScience)|09/03/19|||
-|[MathForMachineLearning]((https://github.com/CrazyAlvaro/Course-Study/tree/master/Mathematics/MathForMachineLearning))|09/12/19||]
+|[SICP](https://github.com/CrazyAlvaro/Course-Study/tree/master/ComputerScience/6.001-SICP)|11/20/15|     |          |
+|ProbablilisticSystem|10/20/19|||
+|LinearAlgebra|10/5/19|||
 
 ### Complete Courses
 |Course/Book       |  Start Date  |  End Date  |     Comment     |
 |:------------------|:------------:|:----------:|:---------------:|
+|[MathForMachineLearning]((https://github.com/CrazyAlvaro/Course-Study/tree/master/Mathematics/MathForMachineLearning))|09/12/19|09/20/19|]
+|[AppliedDataScience](https://github.com/CrazyAlvaro/Course-Study/tree/master/DataScience/AppliedDataScience)|09/03/19|10/06/19||
 |[FinancialAccounting](https://github.com/CrazyAlvaro/Course-Study/tree/master/EconomicsFinance/FinancialAccountingSeries)|01/01/18|04/08/18||
 |[MachineLearningforTrading](https://github.com/CrazyAlvaro/Course-Study/tree/master/EconomicsFinance/MachineLearningforTrading)|09/21/17|09/26/17||
 |[ArtificialIntelligence](https://github.com/CrazyAlvaro/Course-Study/tree/master/DataScience/6.034-ArtificialIntellifence)|07/31/16|08/01/17||
@@ -26,7 +27,6 @@ Study Progress
 ### Legacy Courses
 |Course/Book       |  Start Date  |  End Date  |     Comment     |
 |------------------|:------------:|:----------:|:---------------:|
-|[SICP](https://github.com/CrazyAlvaro/Course-Study/tree/master/ComputerScience/6.001-SICP)|11/20/15|     |          |
 |[FinancialEngineering](https://github.com/CrazyAlvaro/Course-Study/tree/master/EconomicsFinance/FinancialEngineering)|06/22/17|||
 |[QuantopianTutorial](https://github.com/CrazyAlvaro/Course-Study/tree/master/EconomicsFinance/Quantopian)|07/15/17|||
 |[MachineLearning](https://github.com/CrazyAlvaro/Course-Study/tree/master/DataScience/MachineLearning)|08/05/17|||
@@ -35,7 +35,7 @@ Study Progress
 
 ### Future Courses
 #### Math
-[ProbablilisticSystem](https://github.com/CrazyAlvaro/Course-Study/tree/master/ProbablilisticSystem)
+
 
 [NumericalAnalysis](https://www.coursera.org/learn/intro-to-numerical-analysis)
 
