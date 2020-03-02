@@ -1,0 +1,13 @@
+class ClassA {
+  field int num;
+
+  constructor ClassA new(int num) {
+    let num = num;
+    return this;
+  }
+
+  method void print() {
+    do Output.printInt(num);
+    return;
+  }
+}

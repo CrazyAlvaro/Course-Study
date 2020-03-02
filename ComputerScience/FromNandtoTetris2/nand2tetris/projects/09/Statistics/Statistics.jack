@@ -1,0 +1,65 @@
+// Input a list of numbers,
+// Compute its mean and variance use Statistics Class
+
+
+class Statistics {
+  field Array nums;
+  field int size, mean, variance;
+
+  constructor Statistics new(Array array, int length) {
+    let size = length;
+    let nums = array;
+
+    // do Output.printString("size: ");
+    // do Output.printInt(size);
+    do computeMean();
+    do computeVariance();
+    return this;
+  }
+
+  method int mean() {
+    return mean;
+  }
+
+  method int variance() {
+    return variance;
+  }
+
+  method void dispose() {
+    do nums.dispose();
+    do Memory.deAlloc(this);
+    return;
+  }
+
+  method void computeMean() {
+    var int sum, i;
+    let i = 0;
+    let sum = 0;
+
+    do Output.printInt(size);
+    while(i < size) {
+      let sum = sum + nums[i];
+      let i = i + 1;
+    }
+    
+    do Output.printInt(size);
+    let mean = sum / size;
+    return;
+  }
+
+  method void computeVariance() {
+    var int i, x;
+
+    let i = 0;
+    let variance = 0;
+
+    while(i < size) {
+      let x = nums[i] - mean;
+      let variance = variance + Math.multiply(x, x);
+      let i = i + 1;
+    }
+    do Output.printString("variance:");
+    do Output.printInt(variance);
+    return;
+  }
+}

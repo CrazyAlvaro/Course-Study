@@ -1,0 +1,8 @@
+class Main {
+  function void main() {
+    var ClassA a;
+    let a = ClassA.new(3);
+    do a.print();
+    return;
+  }
+}

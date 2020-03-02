@@ -1,0 +1,28 @@
+
+class Main {
+  function void main(){
+    var int size, i, mean, variance;
+    var Array array;
+    var Statistics stats;
+
+    let size = Keyboard.readInt("What's the size of the numbers?");
+    // do Output.printInt(size);
+    let array = Array.new(size);
+    let i = 0;    
+    while(i<size) {
+      let array[i] = Keyboard.readInt("Please input a number: ");
+      let i = i + 1;
+    }
+
+    let stats = Statistics.new(array, size);
+    let mean = stats.mean();
+    let variance = stats.variance();
+
+    do Output.printString("The mean of the array is: ");
+    do Output.printInt(mean);
+    do Output.println();
+    do Output.printString("The variance of the array is: ");
+    do Output.printInt(variance);
+    return;
+  }
+}
