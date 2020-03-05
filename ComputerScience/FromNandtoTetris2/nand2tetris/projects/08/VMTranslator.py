@@ -1,5 +1,5 @@
-# VM(Virtual Machine) translator to assemble code 
-# This program will take an input file/directory 
+# VM(Virtual Machine) translator to assemble code
+# This program will take an input file/directory
 # and output a translated assembly code file.
 
 
@@ -10,10 +10,10 @@ BASE_SP = 256
 
 ## Global Constant
 C_ARITHMETIC  = "C_ARITHMETIC"
-C_PUSH        = "C_PUSH" 
-C_POP         = "C_POP" 
-C_LABEL       = "C_LABEL" 
-C_GOTO        = "C_GOTO" 
+C_PUSH        = "C_PUSH"
+C_POP         = "C_POP"
+C_LABEL       = "C_LABEL"
+C_GOTO        = "C_GOTO"
 C_IF          = "C_IF"
 C_FUNCTION    = "C_FUNCTION"
 C_RETURN      = "C_RETURN"
@@ -84,19 +84,19 @@ class Parser:
           self._command_type = C_UNKNOWN
 
       except ValueError:
-        print("There is no command here") 
+        print("There is no command here")
 
       # fill up arg1 and arg2
       try:
         if self._command_type == C_ARITHMETIC:
           self._arg1 = cmd
-        elif (self._command_type == C_LABEL or 
-              self._command_type == C_GOTO or 
+        elif (self._command_type == C_LABEL or
+              self._command_type == C_GOTO or
               self._command_type == C_IF):
           self._arg1 = words[1]
-        elif (self._command_type == C_PUSH or 
+        elif (self._command_type == C_PUSH or
               self._command_type == C_POP or
-              self._command_type == C_CALL or 
+              self._command_type == C_CALL or
               self._command_type == C_FUNCTION):
           self._arg1 = words[1]
           self._arg2 = words[2]
@@ -106,7 +106,7 @@ class Parser:
           pass
       except ValueError:
         print("something wrong in arguments")
-      
+
       return True
 
     # Start hasMoreCommand function loop
@@ -123,7 +123,7 @@ class Parser:
 
   def advance(self):
     """
-    read the next command from the input 
+    read the next command from the input
 
     @return null
     """
@@ -155,7 +155,7 @@ class Parser:
 
   def current_line(self):
     """
-    return current line, for debugging purpose 
+    return current line, for debugging purpose
     """
     return self._current_line
 
@@ -192,13 +192,13 @@ class CodeWriter:
     with open(self._output, 'a+') as file:
       file.write(code_piece)
 
-  #################### 
+  ####################
   ## label functions
 
   def _get_function_label(self, function_name):
     """
     function should be see from the whole assembly program scope, being called across different vm program.
-    so use single output filename as label 
+    so use single output filename as label
     """
     return "{}.{}".format(self._output_filename, function_name)
 
@@ -211,7 +211,7 @@ class CodeWriter:
 
   def _get_static_label(self, index):
     """
-    static variable expose to all functions inside a vm program(vm file), 
+    static variable expose to all functions inside a vm program(vm file),
     so no function_name used
     """
     return "{}.{}".format(self._vm_filename, index)
@@ -223,17 +223,17 @@ class CodeWriter:
     @return string
     """
     return "{}.{}${}".format(self._vm_filename, self._current_function, origin_label)
-  
+
   ## end label functions
-  #################### 
+  ####################
 
   def set_filename(self, vm_file):
     """
-    starting a new vm_file code_writer part, 
+    starting a new vm_file code_writer part,
     """
     # reset translated label dictionary
     self._vm_filename = vm_file
-  
+
   def write_init(self):
     """
     write the assembly instruction that initialize the bootstrap code
@@ -258,7 +258,7 @@ class CodeWriter:
                "    AM=M-1\n" + \
                "    D=M\n" + \
                "    @" + target_label + "\n" + \
-               "    D, JNE\n" 
+               "    D, JNE\n"
     self._append_output(asm_code)
 
   def write_function(self, function_name, num_vars):
@@ -333,14 +333,14 @@ class CodeWriter:
                "({})\n".format(return_label)
 
     self._append_output(asm_code)
-  
+
   def write_return(self):
     """
     return to the original caller:
     0 store caller's SP(ARG + 1) on R13
       store return address on R14
     1 copy the return value onto argument 0
-    2 restore the segment pointers of the caller: 
+    2 restore the segment pointers of the caller:
 
       | (ARG 0  )       |
       | (ARG ...)       |
@@ -370,7 +370,7 @@ class CodeWriter:
                "    @R14\n" +\
                "    M=D // R14 store return address\n"
 
-    # 1 Copy return value to argument 0 
+    # 1 Copy return value to argument 0
     asm_code += "    @SP\n" +\
                 "    AM=M-1\n" +\
                 "    D=M\n" +\
@@ -404,8 +404,8 @@ class CodeWriter:
                 "    A=D-A\n" + \
                 "    D=M\n" +\
                 "    @{}\n".format(M_LCL) +\
-                "    M=D // LCL\n" 
-    
+                "    M=D // LCL\n"
+
     # 3 skip cleaning
 
     # 4 restore SP
@@ -419,7 +419,7 @@ class CodeWriter:
                 "    A=M\n" +\
                 "    0, JMP\n"
 
-    self._append_output(asm_code) 
+    self._append_output(asm_code)
 
   def write_comment(self, content):
     """
@@ -456,7 +456,7 @@ class CodeWriter:
              "    AM=M-1\n" + \
              "    M=M-D\n" + \
              "    @SP\n" + \
-             "    M=M+1\n" 
+             "    M=M+1\n"
     elif command == "eq":
       """
       x == y
@@ -486,7 +486,7 @@ class CodeWriter:
              "    @SP\n" + \
              "    M=M+1\n" + \
              "(EQUAL_END" + str(self._arithmetic_counter) + ")\n"
-             
+
     elif command == "gt":
       # x > y
       _counter_used = True
@@ -574,9 +574,9 @@ class CodeWriter:
              "    M=!M\n"
     else:
       # unknown command
-      return 
+      return
 
-    if _counter_used:    
+    if _counter_used:
       self._arithmetic_counter += 1
 
     self._append_output(hack)
@@ -601,7 +601,7 @@ class CodeWriter:
         sgmt_addr = M_TEMP
       else:
         raise ValueError("Unrecoganized 'segment' value: %s %i", segment, index)
-      
+
       return sgmt_addr
 
     def _write_push(segment, index):
@@ -636,7 +636,7 @@ class CodeWriter:
                      "    D=M\n"
       else:
         # other segment store address, need get value then add index
-        target_addr = _get_segment_addr(segment) 
+        target_addr = _get_segment_addr(segment)
         value_hack = "    @" + str(target_addr) + "\n" +\
                      "    D=M\n" +\
                      "    @" + str(index) + "\n" + \
@@ -649,7 +649,7 @@ class CodeWriter:
                                "    @SP\n" +\
                                "    M=M+1\n"
 
-      return push_hack 
+      return push_hack
 
     def _write_pop(segment, index):
       """
@@ -685,7 +685,7 @@ class CodeWriter:
                     "    D=A\n"
       else:
         # other segment store address, need get value then add index
-        target_addr = _get_segment_addr(segment) 
+        target_addr = _get_segment_addr(segment)
         addr_hack = "    @" + str(target_addr) + "\n" +\
                     "    D=M\n" +\
                     "    @" + str(index) + "\n" + \
@@ -698,7 +698,7 @@ class CodeWriter:
                  "    A=D-M\n" +\
                  "    D=D-A\n" +\
                  "    M=D\n"
-      return pop_hack 
+      return pop_hack
 
     if command == C_PUSH:
       hack_asm = _write_push(segment, index)
@@ -727,7 +727,7 @@ def translate_driver(vm_path, verbose=False):
     """
     """
     parser = Parser(vm_file_path)
-  
+
     while parser.has_more_commands():
       cmd = parser.command_type()
       if cmd ==  C_ARITHMETIC:
@@ -759,10 +759,10 @@ def translate_driver(vm_path, verbose=False):
       else:
         # Unrecoganized
         pass
-      
+
       if verbose == True and cmd != C_EMPTY:
         code_writer.write_comment(parser.current_line())
-        
+
       # advance line
       parser.advance()
     parser.close()
@@ -773,7 +773,7 @@ def translate_driver(vm_path, verbose=False):
 
     if len(files) == 0:
       print("No vm file found under directory")
-      return 
+      return
 
     sys_init = False
     if "Sys.vm" in files:
@@ -795,12 +795,12 @@ def translate_driver(vm_path, verbose=False):
     code_writer = CodeWriter(output_file, file_name)
     _handle_single_vm(code_writer, vm_path)
   else:
-    print("ERROR: Not a file or dir\n") 
+    print("ERROR: Not a file or dir\n")
     return
 
 
   code_writer.close()
   # Close output file
-  
+
 if __name__ == "__main__":
   translate_driver(sys.argv[1], True)
