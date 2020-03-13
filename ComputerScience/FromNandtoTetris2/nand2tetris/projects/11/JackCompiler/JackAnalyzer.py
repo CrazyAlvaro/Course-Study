@@ -5,7 +5,6 @@ import CompilationEngine
 
 if __name__ == "__main__":
   input_path = sys.argv[1]
-  suffix = ".parser.xml"
 
   # file / director
   if os.path.isdir(input_path):
@@ -17,11 +16,11 @@ if __name__ == "__main__":
     else:
       for file in files:
         input_file  = os.path.join(input_path, file)
-        output_file = os.path.join(input_path, file[:-5]+suffix)
+        output_file = os.path.join(input_path, file[:-5])
         print("Processing: input_file: {} to output_file {}".format(input_file, output_file))
         CompilationEngine.CompilationEngine(input_file, output_file)
   else:
     # file
     input_file = input_path
-    output_file = input_path[:-5] + suffix
+    output_file = input_path[:-5]
     CompilationEngine.CompilationEngine(input_file, output_file)

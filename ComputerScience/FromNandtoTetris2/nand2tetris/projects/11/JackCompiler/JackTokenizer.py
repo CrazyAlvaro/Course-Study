@@ -40,7 +40,7 @@ class JackTokenizer:
                   "char", "void", "var", "static", "field", "let", "do", "if", \
                   "else", "while", "return", "true", "false", "null", "this"]
 
-  def __init__(self, input_file):
+  def __init__(self, input_file, verbose=False):
     with open(input_file) as file:
       self._content = file.read()
 
@@ -57,7 +57,7 @@ class JackTokenizer:
     self._cursor = -1
     self._token = ""
     self._token_type = ""
-    print(self._content)
+    if verbose: print(self._content)
 
   def has_more_tokens(self):
     """
