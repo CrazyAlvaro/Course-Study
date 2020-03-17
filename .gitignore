@@ -5,3 +5,4 @@
 credential.py
 __pycache__/
 __local__/
+.gitignore
