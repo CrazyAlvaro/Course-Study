@@ -6,38 +6,443 @@
 /**
  * A library of functions for displaying graphics on the screen.
  * The Hack physical screen consists of 512 rows (indexed 0..511, top to bottom)
- * of 256 pixels each (indexed 0..255, left to right). The top left pixel on 
+ * of 256 pixels each (indexed 0..255, left to right). The top left pixel on
  * the screen is indexed (0,0).
  */
 class Screen {
+    static boolean color;
+    static Array ithbit;
+    static Array leadingNBits;
+    static Array tailingNBits;
 
     /** Initializes the Screen. */
     function void init() {
+        let color = true;
+
+        // initialize ithbit
+        let ithbit = Array.new(16);
+        let ithbit[0] = 1;
+        let ithbit[1] = 2;
+        let ithbit[2] = 4;
+        let ithbit[3] = 8;
+        let ithbit[4] = 16;
+        let ithbit[5] = 32;
+        let ithbit[6] = 64;
+        let ithbit[7] = 128;
+        let ithbit[8] = 256;
+        let ithbit[9] = 512;
+        let ithbit[10] = 1024;
+        let ithbit[11] = 2048;
+        let ithbit[12] = 4096;
+        let ithbit[13] = 8192;
+        let ithbit[14] = 16384;
+        let ithbit[15] = ~32767;
+
+        let leadingNBits = Array.new(16);
+        let leadingNBits[0]  = 0;    // 0000000000000000
+        let leadingNBits[1]  = 1;    // 1000000000000000
+        let leadingNBits[2]  = 3;    // 1100000000000000
+        let leadingNBits[3]  = 7;    // 1110000000000000
+        let leadingNBits[4]  = 15;   // ...
+        let leadingNBits[5]  = 31;
+        let leadingNBits[6]  = 63;
+        let leadingNBits[7]  = 127;
+        let leadingNBits[8]  = 255;
+        let leadingNBits[9]  = 511;
+        let leadingNBits[10] = 1023;
+        let leadingNBits[11] = 2047;
+        let leadingNBits[12] = 4095;
+        let leadingNBits[13] = 8191;
+        let leadingNBits[14] = 16383;
+        let leadingNBits[15] = 32767;
+
+        let tailingNBits = Array.new(16);
+        let tailingNBits[0]  = 0;            // 0000000000000000
+        let tailingNBits[1]  = ~32767;       // 0000000000000001
+        let tailingNBits[2]  = ~16383;       // 0000000000000011
+        let tailingNBits[3]  = ~8191;        // 0000000000000111
+        let tailingNBits[4]  = ~4095;        // ...
+        let tailingNBits[5]  = ~2047;
+        let tailingNBits[6]  = ~1023;
+        let tailingNBits[7]  = ~511;
+        let tailingNBits[8]  = ~255;
+        let tailingNBits[9]  = ~127;
+        let tailingNBits[10] = ~63;
+        let tailingNBits[11] = ~31;
+        let tailingNBits[12] = ~15;
+        let tailingNBits[13] = ~7;
+        let tailingNBits[14] = ~3;
+        let tailingNBits[15] = ~1;
+        return;
     }
 
     /** Erases the entire screen. */
     function void clearScreen() {
+        var int i;
+        let i = 0;
+        while (i < 8193) {
+            do Memory.poke(16384 + i, 0);
+            let i = i + 1;
+        }
+        return;
     }
 
     /** Sets the current color, to be used for all subsequent drawXXX commands.
      *  Black is represented by true, white by false. */
     function void setColor(boolean b) {
+        let color = b;
+        return;
     }
 
     /** Draws the (x,y) pixel, using the current color. */
     function void drawPixel(int x, int y) {
+        var int addr, value, remainder;
+        let addr = 32 * y + (x / 16) + 16384;
+        let value = Memory.peek(addr);
+        let remainder = x - ((x / 16) * 16);
+
+        if (color) {
+            let value = ithbit[remainder] | value;
+        }
+        else {
+            let value = (~ithbit[remainder]) & value;
+        }
+
+        do Memory.poke(addr, value);
+        return;
+    }
+
+    function void drawVerticalLine(int x, int y1, int y2) {
+        var int y, end;
+        if (y1 < y2) {
+            let y = y1;
+            let end = y2 + 1;
+        }
+        else {
+            let y = y2;
+            let end = y1 + 1;
+        }
+
+        while (y < end) {
+            do Screen.drawPixel(x, y);
+            let y = y + 1;
+        }
+        return;
+    }
+
+    function void drawHorizontalLineRect(int head, int tail, int baseAddr, int frontBitNum, int tailBitNum) {
+        /*
+         * frontBitNum = x1 - (head * 16);
+         * tailBitNum  = x2 - (tail * 16) + 1;
+         */
+        var int iter, value, mask, frontOffset;
+
+        if (head = tail) {
+            if (tailBitNum = 16) {
+                let mask = tailingNBits[tailBitNum - frontBitNum];
+            }
+            else {
+                let mask = leadingNBits[tailBitNum] - leadingNBits[frontBitNum];
+            }
+
+            let value = Memory.peek(baseAddr + head);
+
+            if (color) {
+                let value = value | mask;
+                do Memory.poke(baseAddr + head, value);
+            }
+            else {
+                let value = value & ( ~ mask );
+                do Memory.poke(baseAddr + head, value);
+            }
+        }
+        else {
+            // pre-bit
+            let frontOffset = 16 - frontBitNum;
+            if (~(frontOffset = 16)) {
+                let value = Memory.peek(baseAddr + head);
+
+                if (color) {
+                    let value = value | tailingNBits[frontOffset];
+                    do Memory.poke(baseAddr + head, value);
+                }
+                else {
+                    let value = value & ( ~ tailingNBits[frontOffset] );
+                    do Memory.poke(baseAddr + head, value);
+                }
+
+                let iter = head + 1;
+            }
+            else {
+                // full 16-bit, continue to middle range to fill up
+                let iter = head;
+            }
+
+            // middle range
+            while (iter < tail) {
+                if (color) {
+                    do Memory.poke(baseAddr + iter, -1);
+                }
+                else {
+                    do Memory.poke(baseAddr + iter, 0);
+                }
+                let iter = iter + 1;
+            }
+
+            // after-bit using leadingNBits
+            if (tailBitNum = 16) {
+                if (color) {
+                    do Memory.poke(baseAddr + tail, -1);
+                }
+                else {
+                    do Memory.poke(baseAddr + tail, 0);
+                }
+            }
+            else {
+                let value = Memory.peek(baseAddr + tail);
+                if (color) {
+                    let value = value | leadingNBits[tailBitNum];
+                    do Memory.poke(baseAddr + tail, value);
+                }
+                else {
+                    let value = value & ( ~ leadingNBits[tailBitNum] );
+                    do Memory.poke(baseAddr + tail, value);
+                }
+            }
+        }
+
+        return;
+    }
+    function void drawHorizontalLine(int x1, int x2, int y) {
+        var int head, tail, iter, num, value, offset, mask;
+
+        // make sure x1 < x2
+        if (x1 > x2) {
+            let x1 = x2 + x1;
+            let x2 = x1 - x2;
+            let x1 = x1 - x2;
+        }
+
+        // head, tail: first and last memory location need to be update
+        let head  = x1 / 16;
+        let tail  = x2 / 16;
+        let offset = 16384 + (y * 32);
+
+        // x1, x2 within the same 16-bit range
+        if (head = tail) {
+            let x1 = x1 - (head * 16);
+            let x2 = x2 - (head * 16) + 1;
+            if (x2 = 16) {
+                let mask = tailingNBits[x2-x1];
+            }
+            else {
+                let mask = leadingNBits[x2] - leadingNBits[x1];
+            }
+
+            let value = Memory.peek(offset + head);
+
+            if (color) {
+                let value = value | mask;
+                do Memory.poke(offset + head, value);
+            }
+            else {
+                let value = value & ( ~ mask );
+                do Memory.poke(offset + head, value);
+            }
+        }
+        else {
+            // pre-bit
+            let num = (head + 1) * 16 - x1;
+            if (~(num = 16)) {
+                let value = Memory.peek(offset + head);
+
+                if (color) {
+                    let value = value | tailingNBits[num];
+                    do Memory.poke(offset + head, value);
+                }
+                else {
+                    let value = value & ( ~ tailingNBits[num] );
+                    do Memory.poke(offset + head, value);
+                }
+
+                let iter = head + 1;
+            }
+            else {
+                // full 16-bit, continue to middle range to fill up
+                let iter = head;
+            }
+
+            // middle range
+            while (iter < tail) {
+                if (color) {
+                    do Memory.poke(offset + iter, -1);
+                }
+                else {
+                    do Memory.poke(offset + iter, 0);
+                }
+                let iter = iter + 1;
+            }
+
+            // after-bit using leadingNBits
+            let num = x2 - (tail * 16) + 1;
+            if (num = 16) {
+                if (color) {
+                    do Memory.poke(offset + tail, -1);
+                }
+                else {
+                    do Memory.poke(offset + tail, 0);
+                }
+            }
+            else {
+                let value = Memory.peek(offset + tail);
+                if (color) {
+                    let value = value | leadingNBits[num];
+                    do Memory.poke(offset + tail, value);
+                }
+                else {
+                    let value = value & ( ~ leadingNBits[num] );
+                    do Memory.poke(offset + tail, value);
+                }
+            }
+        }
+
+        return;
     }
 
     /** Draws a line from pixel (x1,y1) to pixel (x2,y2), using the current color. */
     function void drawLine(int x1, int y1, int x2, int y2) {
+        // ix: increment_x, iy: increment_y
+        var int ix, iy, dx, dy, diff;
+
+        // make sure x1 < x2
+        if (x1 > x2) {
+            // swap
+            let x1 = x1 + x2;
+            let x2 = x1 - x2;
+            let x1 = x1 - x2;
+
+            let y1 = y1 + y2;
+            let y2 = y1 - y2;
+            let y1 = y1 - y2;
+        }
+
+        if (x1 = x2) {
+            do Screen.drawVerticalLine(x1, y1, y2);
+            return;
+        }
+
+        if (y1 = y2) {
+            do Screen.drawHorizontalLine(x1, x2, y1);
+            return;
+        }
+
+        let ix = 0;
+        let iy = 0;
+        let dx = x2 - x1;
+        let dy = y2 - y1;
+        let diff = ix * dy - iy * dx;
+
+        if (dy > 0) {
+            // iy/ix > dy/dx -> ix*dy < iy*dx -> diff = ix*dy - iy*dx
+            while ((ix < (dx + 1)) & (iy < (dy + 1))) {
+                do Screen.drawPixel(x1 + ix, y1 + iy);
+                if (diff < 0) {
+                    let ix = ix + 1;
+                    let diff = diff + dy;
+                }
+                else {
+                    let iy = iy + 1;
+                    let diff = diff - dx;
+                }
+            }
+        }
+        else {
+            // dy < 0
+            // iy/ix > dy/dx -> ix*dy < iy*dx -> diff = ix*dy - iy*dx
+            while ((ix < (dx + 1)) & (iy > (dy - 1))) {
+                do Screen.drawPixel(x1 + ix, y1 + iy);
+                if (diff < 0) {
+                    let iy = iy - 1;
+                    let diff = diff + dx;
+                }
+                else {
+                    let ix = ix + 1;
+                    let diff = diff + dy;
+                }
+            }
+        }
+
+        return;
     }
 
     /** Draws a filled rectangle whose top left corner is (x1, y1)
      * and bottom right corner is (x2,y2), using the current color. */
     function void drawRectangle(int x1, int y1, int x2, int y2) {
+        var int y, end;
+        var int head, tail, baseAddr, frontBitNum, tailBitNum;
+        if (y1 > y2) {
+            // swap
+            let x1 = x1 + x2;
+            let x2 = x1 - x2;
+            let x1 = x1 - x2;
+
+            let y1 = y1 + y2;
+            let y2 = y1 - y2;
+            let y1 = y1 - y2;
+        }
+
+        let y = y1;
+        let end = y2 + 1;
+
+        // calculate parameters for drawHorizontalLineRect to save computation time
+        let head  = x1 / 16;
+        let tail  = x2 / 16;
+        let baseAddr = 16384 + (y * 32);
+
+        let frontBitNum = x1 - (head * 16);
+        let tailBitNum  = x2 - (tail * 16) + 1;
+
+        while (y < end) {
+            do Screen.drawHorizontalLineRect(head, tail, baseAddr, frontBitNum, tailBitNum);
+            let baseAddr = baseAddr + 32;
+            let y = y + 1;
+        }
+        return;
     }
 
     /** Draws a filled circle of radius r<=181 around (x,y), using the current color. */
     function void drawCircle(int x, int y, int r) {
+        var int dx, dy;
+
+        if (r > 181) {
+            return;
+        }
+
+        let dy = r;
+        while (dy > -1) {
+            // computer dx
+            if ((dy = 0) | (dy = r)) {
+                if (dy = 0) {
+                    let dx = r;
+                }
+                else {
+                    let dx = 0;
+                }
+            }
+            else {
+                let dx = Math.sqrt(r * r - (dy * dy));
+            }
+
+            // draw two symmetric lines
+            if (dy = 0) {
+                do Screen.drawHorizontalLine(x - dx, x + dx, y);
+            }
+            else {
+                do Screen.drawHorizontalLine(x - dx, x + dx, y - dy);
+                do Screen.drawHorizontalLine(x - dx, x + dx, y + dy);
+            }
+            let dy = dy - 1;
+        }
+        return;
     }
 }

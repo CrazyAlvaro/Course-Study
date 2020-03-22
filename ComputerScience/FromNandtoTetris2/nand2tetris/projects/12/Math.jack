@@ -8,40 +8,201 @@
  * Note: Jack compilers implement multiplication and division using OS method calls.
  */
 class Math {
+    static Array twoToThe;
+    static Array ithbit;
 
     /** Initializes the library. */
     function void init() {
+        let twoToThe = Array.new(15);
+        let twoToThe[0] = 1;
+        let twoToThe[1] = 2;
+        let twoToThe[2] = 4;
+        let twoToThe[3] = 8;
+        let twoToThe[4] = 16;
+        let twoToThe[5] = 32;
+        let twoToThe[6] = 64;
+        let twoToThe[7] = 128;
+        let twoToThe[8] = 256;
+        let twoToThe[9] = 512;
+        let twoToThe[10] = 1024;
+        let twoToThe[11] = 2048;
+        let twoToThe[12] = 4096;
+        let twoToThe[13] = 8192;
+        let twoToThe[14] = 16384;
+        // let twoToThe[15] = 32768;
+
+        let ithbit = Array.new(16);
+        let ithbit[0] = 1;
+        let ithbit[1] = 2;
+        let ithbit[2] = 4;
+        let ithbit[3] = 8;
+        let ithbit[4] = 16;
+        let ithbit[5] = 32;
+        let ithbit[6] = 64;
+        let ithbit[7] = 128;
+        let ithbit[8] = 256;
+        let ithbit[9] = 512;
+        let ithbit[10] = 1024;
+        let ithbit[11] = 2048;
+        let ithbit[12] = 4096;
+        let ithbit[13] = 8192;
+        let ithbit[14] = 16384;
+        let ithbit[15] = - 32767 - 1;
+        return;
     }
 
     /** Returns the absolute value of x. */
     function int abs(int x) {
+        if (x < 0) {
+            return -x;
+        }
+        return x;
     }
 
-    /** Returns the product of x and y. 
-     *  When a Jack compiler detects the multiplication operator '*' in the 
+    /** Returns true if the i-th bit of x is 1, false otherwise */
+    function boolean bit(int x, int i) {
+        if (ithbit[i] & x) {
+            return true;
+        }
+        return false;
+    }
+    /** Returns the product of x and y.
+     *  When a Jack compiler detects the multiplication operator '*' in the
      *  program's code, it handles it by invoking this method. In other words,
      *  the Jack expressions x*y and multiply(x,y) return the same value.
      */
     function int multiply(int x, int y) {
+        var int i, sum, shiftedX;
+        let i = 0;
+        let sum = 0;
+        let shiftedX = x;
+
+        while (i < 16) {
+            if (Math.bit(y, i)) {
+                let sum = sum + shiftedX;
+            }
+            let i = i + 1;
+            let shiftedX = shiftedX + shiftedX;
+        }
+        return sum;
+    }
+
+    function int innerDivide(int x, int y) {
+        var int quotient, remainder;  // Get Sign
+        /* y < 0 overflow */
+        if ((y > x) | (y < 0)) {
+            return 0;
+        }
+
+        let quotient  = Math.innerDivide(x, 2 * y);
+        let remainder = x - (2 * quotient * y);
+
+        if (remainder < y) {
+            return 2 * quotient;
+        }
+        else {
+            return 2 * quotient + 1;
+        }
     }
 
     /** Returns the integer part of x/y.
-     *  When a Jack compiler detects the multiplication operator '/' in the 
+     *  When a Jack compiler detects the division operator '/' in the
      *  program's code, it handles it by invoking this method. In other words,
      *  the Jack expressions x/y and divide(x,y) return the same value.
      */
     function int divide(int x, int y) {
+        var int sign, quotient, remainder;  // Get Sign
+
+        if (((x > 0) & (y > 0)) | ((x < 0) & (y < 0))) {
+            let sign = 1;
+        }
+        else {
+            let sign = -1;
+        }
+
+        let x = Math.abs(x);
+        let y = Math.abs(y);
+
+        if ((y > x) | (y = 0)) {
+            return 0;
+        }
+
+        let quotient  = Math.innerDivide(x, 2 * y);
+        let remainder = x - (2 * quotient * y);
+
+        if (remainder < y) {
+            return sign * 2 * quotient;
+        }
+        else {
+            return sign * 2 * quotient + 1;
+        }
     }
 
-    /** Returns the integer part of the square root of x. */
+    /** Returns the integer part of the square root of x.
+     *  compute the integer part of y = sqrt(x)
+     *  Stategy: find an integer y such that y**2 <= x < (y + 1) **2 (for 0 <= x < 2**n)
+     *  by performing a binary search in the range 0 ... 2**(n/2) -1
+     */
     function int sqrt(int x) {
+        /**
+         *  y = 0
+         *  for j = n/2 -1 ... 0 do
+         *      if (y + 2**j) ** 2 <= x then y = y + 2 ** j
+         *  return y
+         */
+        var int root, temp, n;
+        var boolean loop;
+        let n = 0;
+        let loop = true;
+
+        // find n
+        while (loop) {
+            if ((x < twoToThe[n]) | (n = 14)) {
+                let loop = false;
+            }
+            else {
+                let n = n + 1;
+            }
+        }
+
+        let n = n/2;
+        let temp = 0;
+        let root = 0;
+        let loop = true;
+
+        // find root
+        while (loop) {
+            let temp = Math.multiply((root + twoToThe[n]), (root + twoToThe[n]));
+
+            // overflow, or end
+            if (n = -1) {
+                let loop = false;
+            }
+
+            // if temp < 0, overflow
+            if (((temp < x) | (temp = x)) & temp > 0) {
+                let root = root + twoToThe[n];
+            }
+
+            let n = n - 1;
+        }
+
+        return root;
     }
 
     /** Returns the greater number. */
     function int max(int a, int b) {
+        if (a > b) {
+            return a;
+        }
+        return b;
     }
 
     /** Returns the smaller number. */
     function int min(int a, int b) {
+        if (a < b) {
+            return a;
+        }
+        return b;
     }
 }

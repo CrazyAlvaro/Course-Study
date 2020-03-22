@@ -6,29 +6,34 @@
 /**
  * A library of functions for writing text on the screen.
  * The Hack physical screen consists of 512 rows of 256 pixels each.
- * The library uses a fixed font, in which each character is displayed 
- * within a frame which is 11 pixels high (including 1 pixel for inter-line 
+ * The library uses a fixed font, in which each character is displayed
+ * within a frame which is 11 pixels high (including 1 pixel for inter-line
  * spacing) and 8 pixels wide (including 2 pixels for inter-character spacing).
  * The resulting grid accommodates 23 rows (indexed 0..22, top to bottom)
- * of 64 characters each (indexed 0..63, left to right). The top left 
+ * of 64 characters each (indexed 0..63, left to right). The top left
  * character position on the screen is indexed (0,0). A cursor, implemented
  * as a small filled square, indicates where the next character will be displayed.
  */
 class Output {
 
     // Character map for displaying characters
-    static Array charMaps; 
+    static Array charMaps;
+    static int cursor_i, cursor_j;
 
     /** Initializes the screen, and locates the cursor at the screen's top-left. */
     function void init() {
+        do Output.initMap();
+        let cursor_i = 0;
+        let cursor_j = 0;
+        return;
     }
 
     // Initializes the character map array
     function void initMap() {
         var int i;
-    
+
         let charMaps = Array.new(127);
-        
+
         // Black square, used for displaying non-printable characters.
         do Output.create(0,63,63,63,63,63,63,63,63,63,0,0);
 
@@ -49,9 +54,9 @@ class Output {
         do Output.create(43,0,0,0,12,12,63,12,12,0,0,0);     // +
         do Output.create(44,0,0,0,0,0,0,0,12,12,6,0);        // ,
         do Output.create(45,0,0,0,0,0,63,0,0,0,0,0);         // -
-        do Output.create(46,0,0,0,0,0,0,0,12,12,0,0);        // .    
+        do Output.create(46,0,0,0,0,0,0,0,12,12,0,0);        // .
         do Output.create(47,0,0,32,48,24,12,6,3,1,0,0);      // /
-        
+
         do Output.create(48,12,30,51,51,51,51,51,30,12,0,0); // 0
         do Output.create(49,12,14,15,12,12,12,12,12,63,0,0); // 1
         do Output.create(50,30,51,48,24,12,6,3,51,63,0,0);   // 2
@@ -62,7 +67,7 @@ class Output {
         do Output.create(55,63,49,48,48,24,12,12,12,12,0,0); // 7
         do Output.create(56,30,51,51,51,30,51,51,51,30,0,0); // 8
         do Output.create(57,30,51,51,51,62,48,48,24,14,0,0); // 9
-        
+
         do Output.create(58,0,0,12,12,0,0,12,12,0,0,0);      // :
         do Output.create(59,0,0,12,12,0,0,12,12,6,0,0);      // ;
         do Output.create(60,0,0,24,12,6,3,6,12,24,0,0);      // <
@@ -71,7 +76,7 @@ class Output {
         do Output.create(64,30,51,51,59,59,59,27,3,30,0,0);  // @
         do Output.create(63,30,51,51,24,12,12,0,12,12,0,0);  // ?
 
-        do Output.create(65,0,0,0,0,0,0,0,0,0,0,0);          // A ** TO BE FILLED **
+        do Output.create(65,12,12,30,30,51,51,63,51,51,0,0); // A
         do Output.create(66,31,51,51,51,31,51,51,51,31,0,0); // B
         do Output.create(67,28,54,35,3,3,3,35,54,28,0,0);    // C
         do Output.create(68,15,27,51,51,51,51,51,27,15,0,0); // D
@@ -131,7 +136,7 @@ class Output {
         do Output.create(120,0,0,0,51,30,12,12,30,51,0,0);     // x
         do Output.create(121,0,0,0,51,51,51,62,48,24,15,0);    // y
         do Output.create(122,0,0,0,63,27,12,6,51,63,0,0);      // z
-        
+
         do Output.create(123,56,12,12,12,7,12,12,12,56,0,0);   // {
         do Output.create(124,12,12,12,12,12,12,12,12,12,0,0);  // |
         do Output.create(125,7,12,12,12,56,12,12,12,7,0,0);    // }
@@ -162,7 +167,7 @@ class Output {
 
         return;
     }
-    
+
     // Returns the character map (array of size 11) of the given character.
     // If the given character is invalid or non-printable, returns the
     // character map of a black square.
@@ -176,28 +181,170 @@ class Output {
     /** Moves the cursor to the j-th column of the i-th row,
      *  and erases the character displayed there. */
     function void moveCursor(int i, int j) {
+        do Output.clearCursor();
+        let cursor_i = i;
+        let cursor_j = j;
+        // do Output.outputCursor();
+        return;
+    }
+
+    /** clear current cursor position by output empty grid */
+    function void clearCursor() {
+        do Output.printAtCursor(Output.getMap(32));
+        return;
+    }
+
+    /** print the character represented by map at current cursor position */
+    function void printAtCursor(Array map) {
+        var int i, addr, highMask, lowMask, value;
+        var boolean highPos;
+
+        // initialize i and address
+        let i = 0;
+        let addr = 16384 + (cursor_i * 32 * 11) + (cursor_j / 2);
+
+        if ((cursor_j - (cursor_j / 2 * 2)) = 1) {
+            let highPos = true;
+        }
+        else {
+            let highPos = false;
+        }
+
+        while (i < 10) {
+            let value = Memory.peek(addr);
+
+            if (highPos) {
+                let highMask = map[i] * 256;
+                let lowMask = 255;
+                let value = value & lowMask;
+                let value = value | highMask;
+            }
+            else {
+                let highMask = 32256;
+                let lowMask = map[i];
+                let value = value & highMask;
+                let value = value | lowMask;
+            }
+
+            do Memory.poke(addr, value);
+
+            let i = i + 1;
+            let addr = addr + 32;
+        }
+        return;
     }
 
     /** Displays the given character at the cursor location,
      *  and advances the cursor one column forward. */
     function void printChar(char c) {
+        do Output.clearCursor();
+        do Output.printAtCursor(Output.getMap(c));
+        do Output.forwardCursor();
+        return;
     }
 
     /** displays the given string starting at the cursor location,
      *  and advances the cursor appropriately. */
     function void printString(String s) {
+        var int len, i;
+        let i = 0;
+        let len = s.length();
+
+        while (i < len) {
+            do Output.printChar(s.charAt(i));
+            let i = i + 1;
+        }
+
+        return;
     }
 
     /** Displays the given integer starting at the cursor location,
      *  and advances the cursor appropriately. */
     function void printInt(int i) {
+        var int digit;
+
+        if (i < 0) {
+            do Output.printChar(45);
+            let i = - i;
+        }
+
+        if (i < 10) {
+            do Output.printChar(48+i);
+        }
+        else {
+            let digit = i - (i / 10 * 10);
+            do Output.printInt(i/10);
+            do Output.printInt(digit);
+        }
+
+        return;
+    }
+
+    /** forward cursor to the next available position */
+    function void forwardCursor() {
+        // end
+        if ((cursor_i = 22) & (cursor_j = 63)) {
+            let cursor_i = 0;
+            let cursor_j = 0;
+            return;
+        }
+
+        if (cursor_j = 63) {
+            let cursor_i = cursor_i + 1;
+            let cursor_j = 0;
+        }
+        else {
+            let cursor_j = cursor_j + 1;
+        }
+        return;
     }
 
     /** Advances the cursor to the beginning of the next line. */
     function void println() {
+        do Output.clearCursor();
+        let cursor_i = cursor_i + 1;
+        let cursor_j = 0;
+        return;
+    }
+
+    /** output square at current cursor position */
+    function void outputCursor() {
+        var Array map;
+        let map = Array.new(11);
+            let map[0] = 63;
+            let map[1] = 33;
+            let map[2] = 33;
+            let map[3] = 33;
+            let map[4] = 33;
+            let map[5] = 33;
+            let map[6] = 33;
+            let map[7] = 33;
+            let map[8] = 63;
+            let map[9] = 0;
+            let map[10] = 0;
+
+        do Output.printAtCursor(map);
+        return;
     }
 
     /** Moves the cursor one column back. */
     function void backSpace() {
+        // already at the front
+        if ((cursor_i = 0) & (cursor_j = 0)) {
+            return;
+        }
+
+        // Clear current cursor
+        do Output.clearCursor();
+
+        // Move cursor one position back
+        if (cursor_j = 0) {
+            do Output.moveCursor(cursor_i - 1, 63);
+        }
+        else {
+            do Output.moveCursor(cursor_i, cursor_j - 1);
+        }
+
+        return;
     }
 }
