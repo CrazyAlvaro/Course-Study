@@ -1,7 +1,5 @@
 Study Progress
 ===
-### Latest update: 01/16/20
-
 ### Planned
 #### Mathematics
 [ComputationalNeuroscience](https://www.coursera.org/learn/computational-neuroscience)
@@ -18,7 +16,8 @@ Study Progress
 ### Complete Courses
 |Course/Book       |  Start Date  |  End Date  |     Comment     |
 |:------------------|:------------:|:----------:|:---------------:|
-|[MathForMachineLearning]((https://github.com/CrazyAlvaro/Course-Study/tree/master/Mathematics/MathForMachineLearning))|09/12/19|09/20/19|]
+|[FronNand2Tetris_Part2](https://github.com/CrazyAlvaro/Course-Study/tree/master/ComputerScience/FromNandtoTetris2/nand2tetris)|02/17/20|03/23/20|]
+|[MathForMachineLearning](https://github.com/CrazyAlvaro/Course-Study/tree/master/Mathematics/MathForMachineLearning)|09/12/19|09/20/19|]
 |[AppliedDataScience](https://github.com/CrazyAlvaro/Course-Study/tree/master/DataScience/AppliedDataScience)|09/03/19|10/06/19||
 |[FinancialAccounting](https://github.com/CrazyAlvaro/Course-Study/tree/master/EconomicsFinance/FinancialAccountingSeries)|01/01/18|04/08/18||
 |[MachineLearningforTrading](https://github.com/CrazyAlvaro/Course-Study/tree/master/EconomicsFinance/MachineLearningforTrading)|09/21/17|09/26/17||
