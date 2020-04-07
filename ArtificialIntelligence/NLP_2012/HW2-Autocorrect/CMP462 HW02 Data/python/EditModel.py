@@ -15,9 +15,9 @@ class EditModel:
    for sentence in corpus.corpus:
     for datum in sentence.data:
       self.vocabulary.add(datum.word)
-  
-  
-  
+
+
+
   def editProbabilities(self, word):
     """Computes p(x|word) edit model for a given word. Returns a dictionary mapping x -> p(x|word)."""
     s = [(word[:i], word[i:]) for i in range(len(word) + 1)]
@@ -45,10 +45,10 @@ class EditModel:
           counts[a + b[1] + b[0] + b[2:]] += count
     # replaces
     for a, b in s:
-      if b: 
+      if b:
         for c in self.alphabet:
           if a + c + b[1:] in self.vocabulary:
-            # new word is a + c + b[1:]. 
+            # new word is a + c + b[1:].
             original = b[0]
             replacement = c
             count = self.edit_count(original, replacement)
@@ -58,7 +58,7 @@ class EditModel:
     for a, b in s:
       for c in self.alphabet:
         if a + c + b in self.vocabulary:
-          # new word is a + c + b. 
+          # new word is a + c + b.
           tail = ''
           if len(a) > 0:
             tail = a[-1]
@@ -67,36 +67,38 @@ class EditModel:
           count = self.edit_count(original, replacement)
           if count:
             counts[a + c + b] += count
-  
+
     # normalize counts. sum over them all, divide each entry by sum.
     total = 0.0
-    for a,b in counts.iteritems():
+    for a,b in counts.items():
       total += b
     # self count
     selfCount = max(9*total, 1)
     counts[word] = selfCount
     total += selfCount
     probs = {}
-    if(total != 0.0): 
-      for a,b in counts.iteritems():
+    if(total != 0.0):
+      for a,b in counts.items():
         probs[a] = float(b)/total
     return probs
-        
+
   def read_edit_table(self, file_name):
     """Reads in the string edit counts file. Stores a dictionary of tuples
       (s1,s2) -> count."""
     edit_table = collections.defaultdict(lambda: 0)
-    f = file(file_name)
+    f = open(file_name, encoding = "ISO-8859-1")
     for line in f:
       contents = line.split('\t')
       edit_table[contents[0]] = int(contents[1])
+
+    f.close()
     return edit_table
-  
-  
+
+
   def edit_count(self, s1, s2):
-    """Returns how many times substring s1 is edited as s2."""  
+    """Returns how many times substring s1 is edited as s2."""
     return self.edit_table[s1 + "|" + s2]
-  
+
 
 # taken from http://mwh.geek.nz/2009/04/26/python-damerau-levenshtein-distance/
 # MIT license.
@@ -128,13 +130,13 @@ def dameraulevenshtein(seq1, seq2):
     # However, only the current and two previous rows are needed at once,
     # so we only store those.
     oneago = None
-    thisrow = range(1, len(seq2) + 1) + [0]
-    for x in xrange(len(seq1)):
+    thisrow = list(range(1, len(seq2) + 1)) + [0]
+    for x in range(len(seq1)):
         # Python lists wrap around for negative indices, so put the
         # leftmost column at the *end* of the list. This matches with
         # the zero-indexed strings and saves extra calculation.
         twoago, oneago, thisrow = oneago, thisrow, [0] * len(seq2) + [x + 1]
-        for y in xrange(len(seq2)):
+        for y in range(len(seq2)):
             delcost = oneago[y] + 1
             addcost = thisrow[y - 1] + 1
             subcost = oneago[y - 1] + (seq1[x] != seq2[y])

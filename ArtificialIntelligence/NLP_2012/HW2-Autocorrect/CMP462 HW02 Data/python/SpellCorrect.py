@@ -15,7 +15,7 @@ import types
 # Modified version of Peter Norvig's spelling corrector
 """Spelling Corrector.
 
-Copyright 2007 Peter Norvig. 
+Copyright 2007 Peter Norvig.
 Open source code under MIT license: http://www.opensource.org/licenses/mit-license.php
 """
 
@@ -23,7 +23,7 @@ import re, collections
 
 class SpellCorrect:
   """Holds edit model, language model, corpus. trains"""
-  
+
 
   def __init__(self, lm, corpus):
     """initializes the language model."""
@@ -31,7 +31,7 @@ class SpellCorrect:
     self.editModel = EditModel('../data/count_1edit.txt', corpus)
 
 
-  def evaluate(self, corpus):  
+  def evaluate(self, corpus):
     """Tests this speller on a corpus, returns a SpellingResult"""
     numCorrect = 0
     numTotal = 0
@@ -60,7 +60,7 @@ class SpellCorrect:
     for i in range(1, len(sentence) - 1):
       word = sentence[i]
       editProbs = self.editModel.editProbabilities(word)
-      for alternative, editscore in editProbs.iteritems():
+      for alternative, editscore in editProbs.items():
         if alternative == word:
           continue
         sentence[i] = alternative
@@ -83,7 +83,7 @@ class SpellCorrect:
     return argmax
 
 
-  def correctCorpus(self, corpus): 
+  def correctCorpus(self, corpus):
     """Corrects a whole corpus, returns a JSON representation of the output."""
     string_list = [] # we will join these with commas,  bookended with []
     sentences = corpus.corpus
@@ -96,7 +96,7 @@ class SpellCorrect:
     return output
 
 
-    
+
 def main():
   """Trains all of the language models and tests them on the dev data. Change devPath if you
      wish to do things like test on the training data."""
@@ -106,35 +106,35 @@ def main():
   devPath = '../data/holbrook-tagged-dev.dat'
   devCorpus = HolbrookCorpus(devPath)
 
-  print 'Uniform Language Model: '
+  print("Uniform Language Model: ")
   uniformLM = UniformLanguageModel(trainingCorpus)
   uniformSpell = SpellCorrect(uniformLM, trainingCorpus)
-  uniformOutcome = uniformSpell.evaluate(devCorpus) 
-  print str(uniformOutcome)
+  uniformOutcome = uniformSpell.evaluate(devCorpus)
+  print(str(uniformOutcome))
 
-  print 'Laplace Unigram Language Model: ' 
+  print("Laplace Unigram Language Model: ")
   laplaceUnigramLM = LaplaceUnigramLanguageModel(trainingCorpus)
   laplaceUnigramSpell = SpellCorrect(laplaceUnigramLM, trainingCorpus)
   laplaceUnigramOutcome = laplaceUnigramSpell.evaluate(devCorpus)
-  print str(laplaceUnigramOutcome)
+  print(str(laplaceUnigramOutcome))
 
-  print 'Laplace Bigram Language Model: '
+  print("Laplace Bigram Language Model: ")
   laplaceBigramLM = LaplaceBigramLanguageModel(trainingCorpus)
   laplaceBigramSpell = SpellCorrect(laplaceBigramLM, trainingCorpus)
   laplaceBigramOutcome = laplaceBigramSpell.evaluate(devCorpus)
-  print str(laplaceBigramOutcome)
+  print(str(laplaceBigramOutcome))
 
-  print 'Stupid Backoff Language Model: '  
+  print("Stupid Backoff Language Model: ")
   sbLM = StupidBackoffLanguageModel(trainingCorpus)
   sbSpell = SpellCorrect(sbLM, trainingCorpus)
   sbOutcome = sbSpell.evaluate(devCorpus)
-  print str(sbOutcome)
+  print(str(sbOutcome))
 
-  print 'Custom Language Model: '
+  print("Custom Language Model: ")
   customLM = CustomLanguageModel(trainingCorpus)
   customSpell = SpellCorrect(customLM, trainingCorpus)
   customOutcome = customSpell.evaluate(devCorpus)
-  print str(customOutcome)
+  print(str(customOutcome))
 
 if __name__ == "__main__":
     main()

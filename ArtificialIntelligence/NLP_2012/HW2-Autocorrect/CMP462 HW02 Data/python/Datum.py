@@ -26,7 +26,7 @@ class Datum:
     """Returns true if the error is within edit distance one and contains no numerics/punctuation."""
     if not self.hasError():
       return False
-    distance = dameraulevenshtein(self.word, self.error) 
+    distance = dameraulevenshtein(self.word, self.error)
     if(distance > 1):
       return False
     regex = '.*[^a-zA-Z].*'
@@ -36,7 +36,7 @@ class Datum:
 
   def __str__(self):
     """Format: word (error)?"""
-    rep = self.word 
+    rep = self.word
     if self.hasError():
       rep = rep + " (" + self.error + ")"
     return rep
