@@ -7,7 +7,7 @@ from UnigramLanguageModel import UnigramLanguageModel
 from StupidBackoffLanguageModel import StupidBackoffLanguageModel
 from LaplaceUnigramLanguageModel import LaplaceUnigramLanguageModel
 from LaplaceBigramLanguageModel import LaplaceBigramLanguageModel
-from CustomLanguageModel import CustomLanguageModel
+from CustomLanguageModel import TrigramLanguageModel as CustomLanguageModel
 from EditModel import EditModel
 from SpellingResult import SpellingResult
 import types
@@ -130,7 +130,7 @@ def main():
   sbOutcome = sbSpell.evaluate(devCorpus)
   print(str(sbOutcome))
 
-  print("Custom Language Model: ")
+  print("Custom Language Model- Trigram Stupid Backoff: ")
   customLM = CustomLanguageModel(trainingCorpus)
   customSpell = SpellCorrect(customLM, trainingCorpus)
   customOutcome = customSpell.evaluate(devCorpus)
