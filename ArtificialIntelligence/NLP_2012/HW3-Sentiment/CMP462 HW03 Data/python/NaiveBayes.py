@@ -16,6 +16,7 @@ import sys
 import getopt
 import os
 import math
+import collections
 
 class NaiveBayes:
   class TrainSplit:
@@ -33,40 +34,67 @@ class NaiveBayes:
       self.klass = ''
       self.words = []
 
-
   def __init__(self):
     """NaiveBayes initialization"""
     self.FILTER_STOP_WORDS = False
     self.stopList = set(self.readFile('../data/english.stop'))
     self.numFolds = 10
 
+    # count each vocabulary count in different klass
+    self.klass_vocabulary = collections.defaultdict(lambda: collections.defaultdict(lambda: 0))
+    self.klass_word_num = collections.defaultdict(lambda: 0)
+    self.klass_num = collections.defaultdict(lambda: 0)
+    self.total_klass_num = 0
+
   #############################################################################
   # TODO TODO TODO TODO TODO
 
   def classify(self, words):
-    """ TODO
+    """
       'words' is a list of words to classify. Return 'pos' or 'neg' classification.
     """
-    return 'pos'
+    max_klass = None
+    max_score = float('-inf')
+    for klass in self.klass_num.keys():
+      vcb_dict = self.klass_vocabulary[klass]
+      vcb_total = self.klass_word_num[klass] + len(vcb_dict) # add 1 smooth: + total vocabulary number
 
+      # prior
+      score = math.log(self.klass_num[klass]) - math.log(self.total_klass_num)
+
+      # words' likelihood
+      for word in words:
+        score += math.log(vcb_dict[word] + 1) - math.log(vcb_total)
+
+      if score > max_score:
+        max_score = score
+        max_klass = klass
+
+    return max_klass
 
   def addExample(self, klass, words):
     """
-     * TODO
      * Train your model on an example document with label klass ('pos' or 'neg') and
      * words, a list of strings.
      * You should store whatever data structures you use for your classifier
      * in the NaiveBayes class.
      * Returns nothing
     """
-    pass
+    # train klass info
+    self.total_klass_num += 1
+    self.klass_num[klass] += 1
+
+    # train word info
+    vcb_dict = self.klass_vocabulary[klass]
+    for word in words:
+      vcb_dict[word] += 1
+      self.klass_word_num[klass] += 1
 
   def filterStopWords(self, words):
     """
-    * TODO
     * Filters stop words found in self.stopList.
     """
-    return words
+    return list(set(words) - self.stopList)
 
   # TODO TODO TODO TODO TODO
   #############################################################################
@@ -173,7 +201,7 @@ class NaiveBayes:
           example = self.Example()
           example.words = self.readFile('%s/pos/%s' % (trainDir, fileName))
           example.klass = 'pos'
-          if fileName[2] == str(fold):
+          if fileName[2] == str(fold):    # Use the third pos number to specify different group
             split.test.append(example)
           else:
             split.train.append(example)
