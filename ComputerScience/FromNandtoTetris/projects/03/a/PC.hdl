@@ -16,5 +16,16 @@ CHIP PC {
     OUT out[16];
 
     PARTS:
-    // Put your code here:
+    // compute zero
+    Not16(in=in, out=notin);
+    And16(a=in, b=notin, out=zero);
+
+    // reversed order from if/else if/else
+    Inc16(in=old, out=incout);
+    Mux16(a=old,  b=incout, sel=inc,   out=out0);
+    Mux16(a=out0, b=in,     sel=load,  out=out1);
+    Mux16(a=out1, b=zero,   sel=reset, out=out2);
+
+    // Always load computed value
+    Register(in=out2, load=true, out=old, out=out);
 }
