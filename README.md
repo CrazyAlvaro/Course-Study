@@ -1,10 +1,10 @@
 Study Progress
 ===
 
-### Current 
+### Current
 |Course/Book       |  Start Date  |  End Date  |
 |:-----------------|:------------:|:----------:|
-|[NLP_2012](https://github.com/CrazyAlvaro/Course-Study/tree/master/ArtificialIntelligence/NLP_2012)|03/24/20||
+|[ReinforecementLearning](https://github.com/CrazyAlvaro/Course-Study/tree/master/ArtificialIntelligence/ReinforcementLearning)|09/21/20||
 
 
 <!-- |ProbablilisticSystem|10/20/19|| -->
@@ -21,10 +21,11 @@ Study Progress
 <!-- |[FinancialAccounting](https://github.com/CrazyAlvaro/Course-Study/tree/master/EconomicsFinance/FinancialAccountingSeries)|01/01/18|04/08/18| -->
 <!-- |[MachineLearningforTrading](https://github.com/CrazyAlvaro/Course-Study/tree/master/EconomicsFinance/MachineLearningforTrading)|09/21/17|09/26/17| -->
 
-### Icebox 
+### Icebox
 |Course/Book       |  Start Date  |  End Date  |
 |:-----------------|:------------:|:----------:|
 |[SICP](https://github.com/CrazyAlvaro/Course-Study/tree/master/ComputerScience/6.001-SICP)|11/20/15|     |
+|[NLP_2012](https://github.com/CrazyAlvaro/Course-Study/tree/master/ArtificialIntelligence/NLP_2012)|03/24/20||
 
 
 
@@ -37,23 +38,23 @@ Study Progress
 <!-- |[DeepLearning](https://github.com/CrazyAlvaro/Course-Study/tree/master/DataScience/DeepLearning)|08/17/17||| -->
 <!-- |[DeepLearningwithTensorFlow](https://github.com/CrazyAlvaro/Course-Study/tree/master/DataScience/DeepLearningwithTensorFlow)|09/08/17||| -->
 
-### Backlog 
+### Backlog
 #### Math
 
-[NumericalAnalysis](https://www.coursera.org/learn/intro-to-numerical-analysis)  
-[ConvexOptimization](https://lagunita.stanford.edu/courses/Engineering/CVX101/Winter2014/about)  
-[DifferentialEquations](http://ocw2.mit.edu/courses/mathematics/18-03-differential-equations-spring-2010/index.htm)  
-[StatisticsForApplication](https://ocw.mit.edu/courses/mathematics/18-650-statistics-for-applications-fall-2016/index.htm)  
+[NumericalAnalysis](https://www.coursera.org/learn/intro-to-numerical-analysis)
+[ConvexOptimization](https://lagunita.stanford.edu/courses/Engineering/CVX101/Winter2014/about)
+[DifferentialEquations](http://ocw2.mit.edu/courses/mathematics/18-03-differential-equations-spring-2010/index.htm)
+[StatisticsForApplication](https://ocw.mit.edu/courses/mathematics/18-650-statistics-for-applications-fall-2016/index.htm)
 [ComplexAnalysis](https://www.coursera.org/learn/complex-analysis)
 <!-- [MultivariableCalculus](http://ocw2.mit.edu/courses/mathematics/18-02-multivariable-calculus-fall-2007/index.htm)-->
 
 #### Computer Science
-[DiscreteOptimization](https://www.coursera.org/learn/discrete-optimization)  
-[ProbabilisticGraphicalModelsSpecialization](https://www.coursera.org/courses?languages=en&query=probability+graphical+model)  
-[StatisticalLearningTheoryandApplications](http://www.mit.edu/~9.520/fall17/)  
-[ReinforcementLearning](https://www.coursera.org/specializations/reinforcement-learning)  
-[ComputationalNeuroscience](https://www.coursera.org/learn/computational-neuroscience)  
-[AdvancedMachineLearning](https://www.coursera.org/specializations/aml)  
+[DiscreteOptimization](https://www.coursera.org/learn/discrete-optimization)
+[ProbabilisticGraphicalModelsSpecialization](https://www.coursera.org/courses?languages=en&query=probability+graphical+model)
+[StatisticalLearningTheoryandApplications](http://www.mit.edu/~9.520/fall17/)
+[ReinforcementLearning](https://www.coursera.org/specializations/reinforcement-learning)
+[ComputationalNeuroscience](https://www.coursera.org/learn/computational-neuroscience)
+[AdvancedMachineLearning](https://www.coursera.org/specializations/aml)
 
 <!-- #### EconomicsFinance -->
 <!-- [FinancialTheory](https://ocw.mit.edu/courses/sloan-school-of-management/15-401-finance-theory-i-fall-2008/index.htm)   -->
