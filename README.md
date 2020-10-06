@@ -13,7 +13,8 @@ Study Progress
 |Course/Book       |  Start Date  |  End Date  |
 |:------------------|:------------:|:----------:|
 |[ReinforecementLearning](https://github.com/CrazyAlvaro/Course-Study/tree/master/ArtificialIntelligence/ReinforcementLearning)|09/21/20|10/06/20|
-|[FronNand2Tetris_Part2](https://github.com/CrazyAlvaro/Course-Study/tree/master/ComputerScience/FromNandtoTetris2/)|02/17/20|03/23/20|
+|[FronNand2Tetris_Part1](https://github.com/CrazyAlvaro/Course-Study/tree/master/ComputerScience/FromNandtoTetris/)|04/29/20|05/13/20|
+|[FronNand2Tetris_Part2](https://github.com/CrazyAlvaro/Course-Study/tree/master/ComputerScience/FromNandtoTetris/)|02/17/20|03/23/20|
 |[AppliedDataScience](https://github.com/CrazyAlvaro/Course-Study/tree/master/ArtificialIntelligence/AppliedDataScience)|09/03/19|10/06/19|
 |[MathForMachineLearning](https://github.com/CrazyAlvaro/Course-Study/tree/master/Mathematics/MathForMachineLearning)|09/12/19|09/20/19|
 |[ArtificialIntelligence](https://github.com/CrazyAlvaro/Course-Study/tree/master/ArtificialIntelligence/6.034-ArtificialIntellifence)|07/31/16|08/01/17|
