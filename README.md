@@ -4,6 +4,7 @@ Study Progress
 ### Current
 |Course/Book       |  Start Date  |  End Date  |
 |:-----------------|:------------:|:----------:|
+|[DeepReinforcementLearning](https://github.com/CrazyAlvaro/Course-Study/tree/master/ArtificialIntelligence/CS285_DeepReinforcementLearning)|10/03/20||
 
 
 <!-- |ProbablilisticSystem|10/20/19|| -->
@@ -43,18 +44,23 @@ Study Progress
 #### Math
 
 [NumericalAnalysis](https://www.coursera.org/learn/intro-to-numerical-analysis)
+
 [ConvexOptimization](https://lagunita.stanford.edu/courses/Engineering/CVX101/Winter2014/about)
-[DifferentialEquations](http://ocw2.mit.edu/courses/mathematics/18-03-differential-equations-spring-2010/index.htm)
+
 [StatisticsForApplication](https://ocw.mit.edu/courses/mathematics/18-650-statistics-for-applications-fall-2016/index.htm)
+
 [ComplexAnalysis](https://www.coursera.org/learn/complex-analysis)
 <!-- [MultivariableCalculus](http://ocw2.mit.edu/courses/mathematics/18-02-multivariable-calculus-fall-2007/index.htm)-->
 
 #### Computer Science
 [DiscreteOptimization](https://www.coursera.org/learn/discrete-optimization)
+
 [ProbabilisticGraphicalModelsSpecialization](https://www.coursera.org/courses?languages=en&query=probability+graphical+model)
+
 [StatisticalLearningTheoryandApplications](http://www.mit.edu/~9.520/fall17/)
-[ReinforcementLearning](https://www.coursera.org/specializations/reinforcement-learning)
+
 [ComputationalNeuroscience](https://www.coursera.org/learn/computational-neuroscience)
+
 [AdvancedMachineLearning](https://www.coursera.org/specializations/aml)
 
 <!-- #### EconomicsFinance -->
